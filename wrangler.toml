@@ -1,3 +1,15 @@
 name = "angels-hosts-api"
 main = "src/index.js"
 compatibility_date = "2024-09-04"
+
+# Cloudflare Pages / Auto Deploy Configuration
+[env.production]
+name = "angels-hosts-api-prod"
+routes = [
+  { pattern = "*.example.com", zone_name = "example.com" }
+]
+
+# GitHub integration for auto-deploy
+[build]
+command = "npm install"
+upload = { format = "service-worker" }
