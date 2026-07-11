@@ -1,7 +1,7 @@
 export default {
   async fetch(request, env) {
     if (request.method !== 'POST') {
-      return new Response('Hermes-Toth API Online', {status: 200});
+      return new Response('Angels Hosts API Online', {status: 200});
     }
     const {to, subject, text} = await request.json();
     const res = await fetch('https://api.mailersend.com/v1/email', {
