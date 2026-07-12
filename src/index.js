@@ -55,7 +55,7 @@ export default {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          from: { email: "noreply@trial.mailersend.com" },
+          from: { email: "noreply@test-86org8ej27zgew13.mlsender.net" },
           to: [{ email: to }],
           subject,
           text
