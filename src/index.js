@@ -62,15 +62,11 @@ export default {
         })
       });
 
+      const resultText = await res.text();
+
       if (res.ok) {
         await notify(`✅ Email sent to ${to}: "${subject}"`);
         return Response.json({ ok: true }, { headers: corsHeaders });
       } else {
         await notify(`❌ Email FAILED to ${to}: "${subject}"`);
-        return new Response('Mailersend Fail', { status: 500, headers: corsHeaders });
-      }
-    }
-
-    return new Response('Not Found', { status: 404, headers: corsHeaders });
-  }
-}
+        return Response.json({ error: resultT
