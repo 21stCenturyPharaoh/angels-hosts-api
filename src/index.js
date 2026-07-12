@@ -69,4 +69,10 @@ export default {
         return Response.json({ ok: true }, { headers: corsHeaders });
       } else {
         await notify(`❌ Email FAILED to ${to}: "${subject}"`);
-        return Response.json({ error: resultT
+        return Response.json({ error: resultText }, { status: 500, headers: corsHeaders });
+      }
+    }
+
+    return new Response('Not Found', { status: 404, headers: corsHeaders });
+  }
+}
