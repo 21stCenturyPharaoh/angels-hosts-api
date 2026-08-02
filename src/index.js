@@ -118,7 +118,7 @@ async function register(){
   const res = await fetch('/register-affiliate-v1.5', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload)});
   const data = await res.json();
   if(data.success){
-    document.getElementById('team-result').innerHTML = `<h3>${data.message}</h3>`;
+    document.getElementById('team-result').innerHTML = '<h3>' + data.message + '</h3>';
     alert(data.message);
     window.location = data.wa_invite;
   }
