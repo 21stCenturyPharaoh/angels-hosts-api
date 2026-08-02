@@ -37,10 +37,12 @@ const TEAMS = [
  {id:"Zayin", motto:"We Cut The Path", banner:"zayin.svg"},
 ];
 
-const WA_NODES = {
- A:"https://chat.whatsapp.com/BEpjakOXcZ15LvODx5QXrT",
- B:"https://chat.whatsapp.com/Dp5REfDvI5g9SCkPFX6ztw",
- C:"https://chat.whatsapp.com/CobTIhj1ooPC3beIEploW2"
+const WA_NODES = { 
+  A:"https://chat.whatsapp.com/BEpjakOXcZ15LvODx5QXrT", 
+  B:"https://chat.whatsapp.com/Dp5REfDvI5g9SCkPFX6ztw", 
+  C:"https://chat.whatsapp.com/CobTIhj1ooPC3beIEploW2",
+  D:"https://chat.whatsapp.com/FTSfbuHOx3M6kvDpg9DRLQ", // VISIONARY VA - FREEPORT-MRV
+  E:"https://chat.whatsapp.com/L13CC0rvyyRH1Mv4Ho1ZTz"  // MICDOM RECORDS - 88 BETA NODES
 };
 
 const SECRET="PHARAOH_GHOST_SIG_v15_2026";
