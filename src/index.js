@@ -10,23 +10,139 @@ export default {
     };
     if (request.method === 'OPTIONS') return new Response(null, {headers: cors});
 
-    // API: REGISTER + AUTO-ASSIGN TEAM
+    // === V27.1 HALLEL BRIDGE ===
+    if (url.pathname === "/v27.1/health") {
+      return new Response(JSON.stringify({
+        status: "alive",
+        version: "27.1",
+        bridge: "HALLEL",
+        worker: "angels-hosts-api3",
+        timestamp: new Date().toISOString()
+      }), {headers: {...cors, 'Content-Type': 'application/json'}});
+    }
+
+    if (url.pathname === "/v27.1/architecture") {
+      return new Response(JSON.stringify({
+        version: "27.1",
+        name: "HALLEL Bridge",
+        components: ["videos", "architecture", "health", "hallel"],
+        deployed_as: "angels-hosts-api3",
+        repo: "angels-hosts-api"
+      }), {headers: {...cors, 'Content-Type': 'application/json'}});
+    }
+
+    // Video + image gallery — HTML page with embeds
+    if (url.pathname === "/v27.1/videos") {
+      const videos = [
+        "dhLboOnPljo",
+        "SGPJWd2q2RM",
+        "mHBJN0QA8Fo",
+        "yKufPwpT4E4"
+      ];
+      const images = [
+        "https://cdn.jsdelivr.net/gh/21stCenturyPharaoh/angels-hosts-api@main/assets/halel-map.jpg",
+        "https://cdn.jsdelivr.net/gh/21stCenturyPharaoh/angels-hosts-api@main/assets/halel-pages.jpg"
+      ];
+
+      const videoEmbeds = videos.map(id => `
+        <div class="card">
+          <iframe width="100%" height="220" src="https://www.youtube.com/embed/${id}"
+            title="HALEL Mission Video" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>`).join("");
+
+      const imageEmbeds = images.map(src => `
+        <div class="card"><img src="${src}" style="width:100%;border-radius:8px" alt="HALEL asset"></div>`).join("");
+
+      const html = `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>H.A.L.EL V27.1 — Gallery</title>
+      <style>
+        body{background:#0a0a0a;color:#D4AF37;font-family:Arial;margin:0;padding:20px}
+        h1{text-align:center;text-shadow:0 0 10px #D4AF37}
+        .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;max-width:1100px;margin:0 auto}
+        .card{background:#111;border:2px solid #D4AF37;border-radius:12px;padding:10px}
+      </style></head><body>
+      <h1>H.A.L.EL PLATFORM — V27.1 Gallery</h1>
+      <div class="grid">${imageEmbeds}${videoEmbeds}</div>
+      </body></html>`;
+
+      return new Response(html, {headers: {...cors, 'Content-Type': 'text/html'}});
+    }
+
+    if (url.pathname === "/v27.1/hallel") {
+      if (request.method === "POST") {
+        const data = await request.json().catch(() => ({}));
+        return new Response(JSON.stringify({
+          success: true,
+          received: data,
+          message: "HALLEL bridge received payload"
+        }), {headers: {...cors, 'Content-Type': 'application/json'}});
+      }
+      return new Response(JSON.stringify({
+        version: "27.1",
+        endpoint: "hallel",
+        status: "ready"
+      }), {headers: {...cors, 'Content-Type': 'application/json'}});
+    }
+
+    // === Mailersend trial relay stub (Nefetari β) ===
+    if (url.pathname === "/api/belsidus/send" && request.method === "POST") {
+      const body = await request.json().catch(() => ({}));
+      const { to, subject, text } = body;
+
+      if (!to || !subject || !text) {
+        return new Response(JSON.stringify({
+          success: false, error: "Missing required fields: to, subject, text"
+        }), {status: 400, headers: {...cors, 'Content-Type': 'application/json'}});
+      }
+
+      if (!env.MAILERSEND_API_KEY) {
+        return new Response(JSON.stringify({
+          success: false, error: "MAILERSEND_API_KEY not configured in Worker env"
+        }), {status: 500, headers: {...cors, 'Content-Type': 'application/json'}});
+      }
+
+      try {
+        const msRes = await fetch("https://api.mailersend.com/v1/email", {
+          method: "POST",
+          headers: {
+            "Authorization": `Bearer ${env.MAILERSEND_API_KEY}`,
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            from: { email: env.MAILERSEND_FROM || "trial@yourtrialdomain.mailersend.net", name: "HALEL Bridge" },
+            to: [{ email: to }],
+            subject,
+            text
+          })
+        });
+        const msData = await msRes.json().catch(() => ({}));
+        return new Response(JSON.stringify({
+          success: msRes.ok, status: msRes.status, mailersend: msData
+        }), {headers: {...cors, 'Content-Type': 'application/json'}});
+      } catch (e) {
+        return new Response(JSON.stringify({
+          success: false, error: e.message
+        }), {status: 500, headers: {...cors, 'Content-Type': 'application/json'}});
+      }
+    }
+
+    // === EXISTING: API: REGISTER + AUTO-ASSIGN TEAM ===
     if (request.method === "POST" && url.pathname === "/register-affiliate-v1.5") {
       const data = await request.json();
       const { name, email, order_id, persona_id, lane } = data;
-      
+
       const teams = ["Aleph","Bet","Gimel","Dalet","He","Vav","Zayin"];
-      // TODO: Replace with D1 query for lowest team count
-      const assignedTeam = teams[Math.floor(Math.random() * 7)]; 
+      const assignedTeam = teams[Math.floor(Math.random() * 7)];
       const captain_id = "CAPT" + Math.floor(1000 + Math.random() * 9000);
 
       const wa_links = {
-        "A": "https://chat.whatsapp.com/LINK_A", // H.A.L.EL
-        "B": "https://chat.whatsapp.com/LINK_B", // BRI ESG
-        "C": "https://chat.whatsapp.com/LINK_C"  // Pro Bono
+        "A": "https://chat.whatsapp.com/LINK_A",
+        "B": "https://chat.whatsapp.com/LINK_B",
+        "C": "https://chat.whatsapp.com/LINK_C"
       }
-
-      // TODO: Save to D1/KV: name, email, order_id, persona_id, team, lane, captain_id
 
       return new Response(JSON.stringify({
         success: true,
@@ -36,12 +152,12 @@ export default {
         wa_invite: wa_links[lane]
       }), {headers: {...cors, 'Content-Type': 'application/json'}});
     }
-    
+
     // SERVE FRONTEND
     if (url.pathname === "/" || url.pathname === "/index.html") {
       return new Response(INDEX_HTML, {headers: {'Content-Type': 'text/html'}});
     }
-    
+
     return new Response("404 - Node Not Found", {status: 404});
   }
 }
@@ -76,13 +192,11 @@ button:hover{box-shadow:0 0 15px #D4AF37}
     <option value="Bilhah">Order of Bilhah <span class="gem">💎 Citrine</span></option>
   </select>
 </div>
-
 <div class="card">
   <h2>STEP 2: COUNCIL ASSIGNS YOUR TEAM</h2>
   <p>Law 31: Control The Options. Team assigned for balance.</p>
   <div id="team-result">Awaiting Order Selection...</div>
 </div>
-
 <div class="card">
   <h2>STEP 3: CHOOSE YOUR PERSONA</h2>
   <select id="persona">
@@ -100,7 +214,7 @@ button:hover{box-shadow:0 0 15px #D4AF37}
   <select id="lane">
     <option value="">-- Choose Your Node --</option>
     <option value="A">LANE A: H.A.L.EL CORPS 🌍 - Commission</option>
-    <option value="B">LANE B: BRI ESG CORPS 🌱 - Credits</option>
+    <option value="B">LANE B: BRI ESG CORPS  🌱 - Credits</option>
     <option value="C">LANE C: PRO BONO CORPS ⚖️ - Certificates</option>
   </select>
   <button onclick="register()">I AGREE. ENTER THE NODE.</button>
