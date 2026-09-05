@@ -3,10 +3,36 @@
 // Spelling: H.A.L.L.EL - double L - Humanitarian Angels & Ladies Le Yeshua Ha Elyon
 
 const VIDEOS = [
-  { id: "yKufPwpT4E4", title: "H.A.L.L.EL - Welcome & Lore", slot: "LORE / INTRO", youtube: "https://www.youtube.com/watch?v=yKufPwpT4E4" },
-  { id: "dhLboOnPljo", title: "H.A.L.L.EL - Orders & Consulates", slot: "ORDERS / CONSULATES", youtube: "https://www.youtube.com/watch?v=dhLboOnPljo" },
-  { id: "4JIA5fNc4qw", title: "H.A.L.L.EL - Nodes & Gates", slot: "TEAMS / GATES", youtube: "https://www.youtube.com/watch?v=4JIA5fNc4qw" },
-  { id: "SGPJWd2q2RM", title: "H.A.L.L.EL - Game Mode Activated", slot: "MISSIONS / CORPS / ELEMENTS", youtube: "https://www.youtube.com/watch?v=SGPJWd2q2RM" }
+  {
+    id: "SGPJWd2q2RM",
+    title: "H.A.L.L.EL Official Video / Training",
+    slot: "H.A.L.L.EL",
+    youtube: "https://www.youtube.com/watch?v=SGPJWd2q2RM"
+  },
+  {
+    id: "yKufPwpT4E4",
+    title: "TOTH The Scribe",
+    slot: "TOTH / SCRIBE",
+    youtube: "https://www.youtube.com/watch?v=yKufPwpT4E4"
+  },
+  {
+    id: "dhLboOnPljo",
+    title: "Pharaoh Conglomerate Autonomous Synthetic Assets",
+    slot: "PHARAOH CONGLOMERATE",
+    youtube: "https://www.youtube.com/watch?v=dhLboOnPljo"
+  },
+  {
+    id: "Dk2nBc8_97M",
+    title: "Registry Affiliate Accelerator",
+    slot: "REGISTRY ACCELERATOR",
+    youtube: "https://www.youtube.com/watch?v=Dk2nBc8_97M"
+  },
+  {
+    id: "4JIA5fNc4qw",
+    title: "Autonomous Synthetic Assets Trailer @ThePharaohConglomerate @UnsealingTheProphets",
+    slot: "AUTONOMOUS SYNTHETIC ASSETS",
+    youtube: "https://www.youtube.com/watch?v=4JIA5fNc4qw"
+  }
 ];
 
 const IMAGES = [
@@ -197,7 +223,7 @@ export default {
     if (path === "/v27.1/architecture") {
       return json(ARCH);
     }
-    if (path === "/v27.1/videos") {
+    if (path === "/v27.1/videos" || path === "/v27.1/videos.json") {
       return json({ version: "V27.1", platform: "H.A.L.L.EL PLATFORM", canonical: true, spelling: "H.A.L.L.EL", placements: VIDEOS, images: IMAGES });
     }
     if (path === "/v27.1/hallel" || path === "/v27.1/hall.el" || path === "/v27.1/hall-el") {
