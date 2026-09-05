@@ -1,4 +1,4 @@
-// H.A.L.L.EL PLATFORM - V27.1 Bridge - DOUBLE L FINAL FIX
+// H.A.L.L.EL PLATFORM - V27.1 Bridge - WITH LIVE REGISTRATION
 // Worker: angels-hosts-api3.pharangels.workers.dev
 // Spelling: H.A.L.L.EL - double L - Humanitarian Angels & Ladies Le Yeshua Ha Elyon
 
@@ -7,6 +7,11 @@ const VIDEOS = [
   { id: "dhLboOnPljo", title: "H.A.L.L.EL - Orders & Consulates", slot: "ORDERS / CONSULATES", youtube: "https://www.youtube.com/watch?v=dhLboOnPljo" },
   { id: "4JIA5fNc4qw", title: "H.A.L.L.EL - Nodes & Gates", slot: "TEAMS / GATES", youtube: "https://www.youtube.com/watch?v=4JIA5fNc4qw" },
   { id: "SGPJWd2q2RM", title: "H.A.L.L.EL - Game Mode Activated", slot: "MISSIONS / CORPS / ELEMENTS", youtube: "https://www.youtube.com/watch?v=SGPJWd2q2RM" }
+];
+
+const IMAGES = [
+  "https://cdn.jsdelivr.net/gh/21stCenturyPharaoh/angels-hosts-api@main/assets/halel-map.jpg",
+  "https://cdn.jsdelivr.net/gh/21stCenturyPharaoh/angels-hosts-api@main/assets/halel-pages.jpg"
 ];
 
 const ARCH = {
@@ -28,10 +33,16 @@ const ARCH = {
   elements: ["AIR","WATER","EARTH","FIRE"]
 };
 
+const cors = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "POST, GET, OPTIONS",
+  "Access-Control-Allow-Headers": "Content-Type"
+};
+
 function json(data, status=200){
   return new Response(JSON.stringify(data, null, 2), {
     status,
-    headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*", "Cache-Control": "no-cache" }
+    headers: { "Content-Type": "application/json", "Cache-Control": "no-cache", ...cors }
   });
 }
 
@@ -51,11 +62,19 @@ body{margin:0;font-family:system-ui;background:#070a12;color:#e8e8f0}
 .card{background:#0f1630;border:1px solid #1e2a5a;border-radius:16px;padding:18px;cursor:pointer;transition:.2s}
 .card:hover{transform:translateY(-2px);border-color:#5a78ff}
 .card h3{margin:0 0 6px 0;letter-spacing:1px}
+.gallery{max-width:1200px;margin:auto;padding:0 24px 24px 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.gallery img{width:100%;border-radius:16px;border:1px solid #1e2a5a;display:block}
 .videos{max-width:1200px;margin:auto;padding:0 24px 24px 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px}
 .vid{background:#0f1630;border:1px solid #1e2a5a;border-radius:16px;overflow:hidden}
 .vid iframe{width:100%;aspect-ratio:16/9;border:0}
 .vid .meta{padding:10px 12px;font-size:12px;opacity:.8}
 a{color:#8aa0ff;text-decoration:none}
+.reg{max-width:600px;margin:0 auto 24px auto;background:#0f1630;border:1px solid #1e2a5a;border-radius:16px;padding:24px}
+.reg h2{margin-top:0;text-align:center;letter-spacing:2px}
+.reg select,.reg input,.reg button{width:100%;box-sizing:border-box;padding:12px;margin:8px 0;border-radius:8px;border:1px solid #3a4ea0;background:#070a12;color:#e8e8f0;font-size:16px}
+.reg button{background:#d4af37;color:#000;font-weight:bold;cursor:pointer;border:none}
+.reg button:hover{box-shadow:0 0 12px #d4af37}
+#reg-result{margin-top:12px;font-size:14px;min-height:20px}
 </style>
 </head>
 <body>
@@ -66,6 +85,38 @@ a{color:#8aa0ff;text-decoration:none}
 <div class="badge">V27.1 BRIDGE • OPERATIONS / GAME LAYER</div>
 <p style="max-width:700px;margin:18px auto;opacity:.7">The optional LARP layer of the Volunteer Exchange Portal. Choose your Order, Consulate, Node Team, Gate, Corps, and Element.</p>
 </div>
+
+<div class="reg" id="register">
+<h2>JOIN THE COUNCIL</h2>
+<select id="order_id">
+<option value="">-- Which House Calls You? --</option>
+<option value="1">Order of Havah — Emerald</option>
+<option value="2">Order of Sarah — Sapphire</option>
+<option value="3">Order of Ruth — Topaz</option>
+<option value="4">Order of Esther — Amethyst</option>
+<option value="5">Order of Deborah — Ruby</option>
+<option value="6">Order of Miriam — Jasper</option>
+<option value="7">Order of Candace — Diamond</option>
+<option value="8">Order of Elizabeth — Pearl</option>
+</select>
+<select id="persona_id">
+<option value="">-- Which Mask Will You Wear? --</option>
+<option value="1">Strategos / Strategia — Envoy</option>
+<option value="2">Builder / Matriarch — Steward</option>
+<option value="3">Artificer / Artificia — Engineer</option>
+</select>
+<input id="name" placeholder="Full Name">
+<input id="email" placeholder="Email">
+<select id="lane">
+<option value="">-- Choose Your Node --</option>
+<option value="A">LANE A — H.A.L.L.EL CORPS — Commission</option>
+<option value="B">LANE B — BRI ESG CORPS — Credits</option>
+<option value="C">LANE C — PRO BONO CORPS — Certificates</option>
+</select>
+<button onclick="registerCaptain()">I AGREE. ENTER THE NODE.</button>
+<div id="reg-result"></div>
+</div>
+
 <div class="grid">
 <div class="card" onclick="location.href='#missions'"><h3>MISSIONS</h3><div>Mission Board & Active Tasks</div></div>
 <div class="card" onclick="location.href='#teams'"><h3>TEAMS</h3><div>Node Teams: Aleph, Bet, Gimel, Dalet, He, Vav, Zayin</div></div>
@@ -75,6 +126,9 @@ a{color:#8aa0ff;text-decoration:none}
 <div class="card" onclick="location.href='#corps'"><h3>CORPS</h3><div>Angels Corps | Ladies Corps | Divas Corps</div></div>
 <div class="card" onclick="location.href='#elements'"><h3>ELEMENTS</h3><div>AIR · WATER · EARTH · FIRE</div></div>
 <div class="card" onclick="location.href='#lore'"><h3>LORE</h3><div>Synthetic Assets & Command</div></div>
+</div>
+<div class="gallery">
+${IMAGES.map(src=>`<img src="${src}" alt="H.A.L.L.EL asset">`).join('')}
 </div>
 <div class="videos">
 ${VIDEOS.map(v=>`<div class="vid"><iframe src="https://www.youtube.com/embed/${v.id}" allowfullscreen></iframe><div class="meta"><b>${v.slot}</b> — ${v.title}<br><a href="${v.youtube}" target="_blank">${v.youtube}</a></div></div>`).join('')}
@@ -91,31 +145,122 @@ ${VIDEOS.map(v=>`<div class="vid"><iframe src="https://www.youtube.com/embed/${v
 <hr style="border:0;border-top:1px solid #1e2a5a;margin:32px 0">
 <p style="font-size:12px;opacity:.6">Endpoints: <a href="/v27.1/health">/v27.1/health</a> · <a href="/v27.1/architecture">/v27.1/architecture</a> · <a href="/v27.1/videos">/v27.1/videos</a> · <a href="/v27.1/hallel">/v27.1/hallel</a></p>
 </div>
+<script>
+async function registerCaptain(){
+  const payload = {
+    name: document.getElementById('name').value || 'Captain',
+    email: document.getElementById('email').value,
+    order_id: parseInt(document.getElementById('order_id').value || '1'),
+    persona_id: parseInt(document.getElementById('persona_id').value || '1'),
+    lane: document.getElementById('lane').value || 'A'
+  };
+  const resultBox = document.getElementById('reg-result');
+  resultBox.textContent = 'Submitting to the Council...';
+  try {
+    const res = await fetch('/register-affiliate-v1.5', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify(payload)
+    });
+    const data = await res.json();
+    if(data.success){
+      resultBox.innerHTML = '<b>' + data.message + '</b><br>Captain ID: ' + data.captain_id;
+      if(data.wa_invite){
+        setTimeout(()=>{ window.location = data.wa_invite; }, 1500);
+      }
+    } else {
+      resultBox.textContent = 'Registration failed. Please try again.';
+    }
+  } catch(e) {
+    resultBox.textContent = 'Error contacting the Council: ' + e.message;
+  }
+}
+</script>
 </body>
 </html>`;
 }
 
 export default {
-  async fetch(request){
+  async fetch(request, env){
     const url = new URL(request.url);
     let path = url.pathname.toLowerCase();
     if(path.endsWith("/") && path.length > 1) path = path.slice(0,-1);
 
+    if (request.method === "OPTIONS") return new Response(null, { headers: cors });
+
     if (path === "" || path === "/" || path === "/index.html") {
-      return new Response(htmlPage(), { headers: { "Content-Type": "text/html; charset=utf-8", "Access-Control-Allow-Origin": "*" } });
+      return new Response(htmlPage(), { headers: { "Content-Type": "text/html; charset=utf-8", ...cors } });
     }
     if (path === "/v27.1/health" || path === "/health") {
-      return json({ status: "ok", worker: "angels-hosts-api3", platform: "H.A.L.L.EL PLATFORM", version: "V27.1", spelling: "H.A.L.L.EL double L", timestamp: new Date().toISOString(), videos: VIDEOS.length });
+      return json({ status: "ok", worker: "angels-hosts-api3", platform: "H.A.L.L.EL PLATFORM", version: "V27.1", spelling: "H.A.L.L.EL double L", timestamp: new Date().toISOString(), videos: VIDEOS.length, images: IMAGES.length });
     }
     if (path === "/v27.1/architecture") {
       return json(ARCH);
     }
     if (path === "/v27.1/videos") {
-      return json({ version: "V27.1", platform: "H.A.L.L.EL PLATFORM", canonical: true, spelling: "H.A.L.L.EL", placements: VIDEOS });
+      return json({ version: "V27.1", platform: "H.A.L.L.EL PLATFORM", canonical: true, spelling: "H.A.L.L.EL", placements: VIDEOS, images: IMAGES });
     }
     if (path === "/v27.1/hallel" || path === "/v27.1/hall.el" || path === "/v27.1/hall-el") {
+      if (request.method === "POST") {
+        const data = await request.json().catch(() => ({}));
+        return json({ success: true, received: data, message: "HALLEL bridge received payload" });
+      }
       return json({ platform: "H.A.L.L.EL PLATFORM", fullName: ARCH.fullName, shortName: "H.A.L.L.EL", gameMode: ARCH.mode, orders: ARCH.orders, nodes: ARCH.nodes, gates: ARCH.gates, corps: ARCH.corps, elements: ARCH.elements, videos: VIDEOS });
     }
+
+    // === Registration: assign order/team/lane ===
+    if (path === "/register-affiliate-v1.5" && request.method === "POST") {
+      const data = await request.json().catch(() => ({}));
+      const { name, email, order_id, persona_id, lane } = data;
+      const teams = ARCH.nodes;
+      const assignedTeam = teams[Math.floor(Math.random() * teams.length)];
+      const captain_id = "CAPT" + Math.floor(1000 + Math.random() * 9000);
+      const wa_links = {
+        "A": "https://chat.whatsapp.com/LINK_A",
+        "B": "https://chat.whatsapp.com/LINK_B",
+        "C": "https://chat.whatsapp.com/LINK_C"
+      };
+      return json({
+        success: true,
+        captain_id,
+        team: assignedTeam,
+        message: `The Council has assigned you to ${assignedTeam} TEAM. You are the Vanguard.`,
+        wa_invite: wa_links[lane] || null
+      });
+    }
+
+    // === Mailersend trial relay stub (Nefetari β) ===
+    if (path === "/api/belsidus/send" && request.method === "POST") {
+      const body = await request.json().catch(() => ({}));
+      const { to, subject, text } = body;
+
+      if (!to || !subject || !text) {
+        return json({ success: false, error: "Missing required fields: to, subject, text" }, 400);
+      }
+      if (!env.MAILERSEND_API_KEY) {
+        return json({ success: false, error: "MAILERSEND_API_KEY not configured in Worker env" }, 500);
+      }
+      try {
+        const msRes = await fetch("https://api.mailersend.com/v1/email", {
+          method: "POST",
+          headers: {
+            "Authorization": `Bearer ${env.MAILERSEND_API_KEY}`,
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            from: { email: env.MAILERSEND_FROM || "trial@yourtrialdomain.mailersend.net", name: "HALEL Bridge" },
+            to: [{ email: to }],
+            subject,
+            text
+          })
+        });
+        const msData = await msRes.json().catch(() => ({}));
+        return json({ success: msRes.ok, status: msRes.status, mailersend: msData });
+      } catch (e) {
+        return json({ success: false, error: e.message }, 500);
+      }
+    }
+
     return json({ error: "Not Found", path: url.pathname, worker: "H.A.L.L.EL PLATFORM V27.1" }, 404);
   }
-}
+};
