@@ -5,7 +5,7 @@
 const VIDEOS = [
   { id: "yKufPwpT4E4", title: "H.A.L.L.EL - Welcome & Lore", slot: "LORE / INTRO", youtube: "https://www.youtube.com/watch?v=yKufPwpT4E4" },
   { id: "dhLboOnPljo", title: "H.A.L.L.EL - Orders & Consulates", slot: "ORDERS / CONSULATES", youtube: "https://www.youtube.com/watch?v=dhLboOnPljo" },
-  { id: { id: "4JIA5fNc4qw", title: "H.A.L.L.EL - Nodes & Gates", slot: "TEAMS / GATES", youtube: "https://www.youtube.com/watch?v=4JIA5fNc4qw" },", title: "H.A.L.L.EL - Nodes & Gates", slot: "TEAMS / GATES", youtube: "https://www.youtube.com/watch?v=dhLboOnPljo" },
+  { id: "4JIA5fNc4qw", title: "H.A.L.L.EL - Nodes & Gates", slot: "TEAMS / GATES", youtube: "https://www.youtube.com/watch?v=4JIA5fNc4qw" },
   { id: "SGPJWd2q2RM", title: "H.A.L.L.EL - Game Mode Activated", slot: "MISSIONS / CORPS / ELEMENTS", youtube: "https://www.youtube.com/watch?v=SGPJWd2q2RM" }
 ];
 
