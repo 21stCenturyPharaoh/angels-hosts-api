@@ -2,17 +2,66 @@
  * H.A.L.L.EL PLATFORM V27.5 亚洲之门
  * SOVEREIGN BRAIN - angels-hosts-api3.pharangels.workers.dev
  * CCorp 88-0710776 / Nonprofit 88-0836464 IRS-SAFE
- * 8 Base44 Engines + WhatsApp (send+receive) + Engine Proxy + Firewall + 5 Videos
+ * 8 Base44 Engines + WhatsApp (send+receive) + Engine Proxy + Firewall + 6 Videos
  */
 
+// ==============================
+// 1. VIDEO REGISTRY - 6 Core
+// ==============================
 const VIDEOS = [
-  { id: "SGPJWd2q2RM", title: "H.A.L.L.EL Official Video / Training", slot: "H.A.L.L.EL", youtube: "https://www.youtube.com/watch?v=SGPJWd2q2RM", embed: "https://www.youtube.com/embed/SGPJWd2q2RM", status: "active" },
-  { id: "yKufPwpT4E4", title: "TOTH The Scribe", slot: "TOTH / SCRIBE", youtube: "https://www.youtube.com/watch?v=yKufPwpT4E4", embed: "https://www.youtube.com/embed/yKufPwpT4E4", status: "active" },
-  { id: "dhLboOnPljo", title: "Pharaoh Conglomerate Autonomous Synthetic Assets", slot: "PHARAOH CONGLOMERATE", youtube: "https://www.youtube.com/watch?v=dhLboOnPljo", embed: "https://www.youtube.com/embed/dhLboOnPljo", status: "active" },
-  { id: "Dk2nBc8_97M", title: "Registry Affiliate Accelerator", slot: "REGISTRY ACCELERATOR", youtube: "https://www.youtube.com/watch?v=Dk2nBc8_97M", embed: "https://www.youtube.com/embed/Dk2nBc8_97M", status: "active" },
-  { id: "4JIA5fNc4qw", title: "Autonomous Synthetic Assets Trailer", slot: "AUTONOMOUS SYNTHETIC ASSETS", youtube: "https://www.youtube.com/watch?v=4JIA5fNc4qw", embed: "https://www.youtube.com/embed/4JIA5fNc4qw", status: "active" }
+  {
+    id: "KRiIS2qplRI",
+    title: "The Institutional Shield",
+    slot: "INSTITUTIONAL SHIELD",
+    youtube: "https://www.youtube.com/watch?v=KRiIS2qplRI",
+    embed: "https://www.youtube.com/embed/KRiIS2qplRI",
+    status: "active"
+  },
+  {
+    id: "SGPJWd2q2RM",
+    title: "H.A.L.L.EL Official Video / Training",
+    slot: "H.A.L.L.EL",
+    youtube: "https://www.youtube.com/watch?v=SGPJWd2q2RM",
+    embed: "https://www.youtube.com/embed/SGPJWd2q2RM",
+    status: "active"
+  },
+  {
+    id: "yKufPwpT4E4",
+    title: "TOTH The Scribe",
+    slot: "TOTH / SCRIBE",
+    youtube: "https://www.youtube.com/watch?v=yKufPwpT4E4",
+    embed: "https://www.youtube.com/embed/yKufPwpT4E4",
+    status: "active"
+  },
+  {
+    id: "dhLboOnPljo",
+    title: "Pharaoh Conglomerate Autonomous Synthetic Assets",
+    slot: "PHARAOH CONGLOMERATE",
+    youtube: "https://www.youtube.com/watch?v=dhLboOnPljo",
+    embed: "https://www.youtube.com/embed/dhLboOnPljo",
+    status: "active"
+  },
+  {
+    id: "Dk2nBc8_97M",
+    title: "Registry Affiliate Accelerator",
+    slot: "REGISTRY ACCELERATOR",
+    youtube: "https://www.youtube.com/watch?v=Dk2nBc8_97M",
+    embed: "https://www.youtube.com/embed/Dk2nBc8_97M",
+    status: "active"
+  },
+  {
+    id: "4JIA5fNc4qw",
+    title: "Autonomous Synthetic Assets Trailer",
+    slot: "AUTONOMOUS SYNTHETIC ASSETS",
+    youtube: "https://www.youtube.com/watch?v=4JIA5fNc4qw",
+    embed: "https://www.youtube.com/embed/4JIA5fNc4qw",
+    status: "active"
+  }
 ];
 
+// ==============================
+// 2. 8 BASE44 SOVEREIGN ENGINES
+// ==============================
 const ENGINES = {
   VOLUNTEER_EXCHANGE: "https://pharaoh-serve-flow.base44.app",
   CORE_ENGINE: "https://pharaoh-core-engine.base44.app",
@@ -24,6 +73,9 @@ const ENGINES = {
   FINANCIAL_RAIL: "https://pharaoh-nexus-gold.base44.app"
 };
 
+// ==============================
+// 3. BASE44 REGISTRY
+// ==============================
 const BASE44 = {
   version: "V27.5 亚洲之门",
   apps: 8,
@@ -44,6 +96,9 @@ const BASE44 = {
   engines: ENGINES
 };
 
+// ==============================
+// 4. WHATSAPP COMMAND CENTER
+// ==============================
 const WHATSAPP = {
   channel: "whatsapp",
   platform: "WhatsApp Business API",
@@ -63,12 +118,18 @@ const WHATSAPP = {
   region: "Liberia / Global"
 };
 
+// ==============================
+// 5. MISSIONS
+// ==============================
 const MISSIONS = [
   "Volunteer_Exchange", "EcoToken_Rewards", "Diamond_Credentials", "Mission_Control",
   "Strategic_Sims", "Governance_Analytics", "Shipment_Tracking", "Stewardship_Reports",
   "Donor_Recognition", "Sovereign_Command_UI"
 ];
 
+// ==============================
+// 6. FIREWALL + SYNTHETIC ASSETS
+// ==============================
 const FIREWALL = {
   ccorp: "88-0710776",
   nonprofit: "88-0836464",
@@ -143,7 +204,7 @@ export default {
 
     if (path === "/v27.5/health" || path === "/health" || path === "/v27.1/health") {
       return J({
-        status: "ok", version: "V27.5 亚洲之门", engines: 8, videos: 5, missions: 10,
+        status: "ok", version: "V27.5 亚洲之门", engines: 8, videos: 6, missions: 10,
         whatsapp: "connected", base44: "operational", firewall: "IRS-SAFE",
         assets: SYNTHETIC_ASSETS.length, timestamp: new Date().toISOString()
       });
@@ -220,7 +281,7 @@ body{background:#070b1e;color:#e6e8ff;font-family:system-ui,sans-serif;margin:0}
 a{color:#D4AF37;text-decoration:none}
 </style></head><body>
 <div class="top"><h1>H.A.L.L.EL PLATFORM <span class="gold">V27.5 亚洲之门</span></h1>
-<p class="mono">慈悲令 守护令 希望令 光明令 人道天使 | 5 videos | 8 Base44 Engines | WhatsApp Active | HALLEL-API-ONLY | IRS-SAFE</p>
+<p class="mono">慈悲令 守护令 希望令 光明令 人道天使 | 6 videos | 8 Base44 Engines | WhatsApp Active | HALLEL-API-ONLY | IRS-SAFE</p>
 <p class="mono">Endpoints: 
 <a href="/v27.5/engines.json">/engines.json</a> · 
 <a href="/v27.5/base44.json">/base44.json</a> · 
