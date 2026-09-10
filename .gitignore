@@ -1,4 +1,12 @@
 node_modules/
 .wrangler/
 .dev.vars
-.env
+.envdeploy.sh
+metadata.json
+nano
+*.backup*
+*.docx
+*.mp4
+*.wav
+*.jpg
+*.webp
