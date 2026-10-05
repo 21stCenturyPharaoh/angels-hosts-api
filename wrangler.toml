@@ -1,3 +1,7 @@
-name = "angels-hosts-api3"
-main = "src/index.js"
-compatibility_date = "2024-01-01"
+name = "angels-host-api3"
+main = "index.js"
+compatibility_date = "2024-06-01"
+
+[[services]]
+binding = "AUTO_DELIVERY"
+service = "pharaoh-auto-delivery"
