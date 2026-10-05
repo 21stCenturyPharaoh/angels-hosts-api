@@ -16,28 +16,14 @@ export default {
     ];
 
     // ============================================================
-    // MICDOM KOLOKWA GLOSSARY v2.0 — FULL LEXICON — 512 TERMS — Underwater Kemet Edition
-    // Source: Micdom AI Record's LEXICON & REFERENCE docx — parsed 492 + 16 + particles
-    // Story Bible v2: Sunken Kemet — gold-lit hieroglyph Sphinx kelp obelisks lanterns never out — DJ Dehrtay Dog Archive DJ
+    // MICDOM KOLOKWA GLOSSARY v2.0 — FULL LEXICON — 512 TERMS — Underwater Kemet — FIXED v2
     // ============================================================
     const KOLOKWA_GLOSSARY = {
       "asset_name": "Micdom Kolokwa Glossary v2.0 — Full Lexicon — Underwater Kemet Edition",
-      "owner": "Pharaoh Conglomerate",
-      "license": "Sovereign Proprietary - All Rights Reserved",
       "version": "2.0",
-      "language": "Liberian Kolokwa English",
-      "source_doc": "Micdom AI Record's LEXICON & REFERENCE — Koloqua Glossary + Particles",
-      "chain": "Pharaoh-Chain 0x504841",
-      "owner_id": "0xCOLONEL",
-      "firewall": "LAW48+44",
-      "product_id": "KOLOKWA_GLOSSARY_V2",
       "count": 512,
-      "story_bible": "THE MOVEMENT v2 Underwater Kemet — Sunken Kemet — gold-lit Sphinx kelp obelisks lanterns never out — Dehrtay Dog Archive DJ",
-      "world": "Sunken Kemet — lost Egyptian civilization beneath Atlantic off West African coast — off Liberia — 88 fathoms — 88尊",
-      "pricing": {"standalone": 7, "bundle_registry": 27, "bundle_unsealing": 77, "bundle_complete": 77, "affiliate": "15% HIGH-TICKET", "description": "Standalone $7 — Registry $27 — Unsealing $77 — Complete $77"},
+      "pricing": {"standalone": 7, "bundle_registry": 27, "bundle_unsealing": 77, "bundle_complete": 77},
       "adlibs": ["Bang", "grrah", "Ma"],
-      "adlib_rule": "Bang, grrah, Ma MUST pass through as-is — NOT TRANSLATED — Dehrtay Dog signature — Archive DJ",
-      "usage": "For caption generation, voice synthesis, translation engine, TikTok Mini Series Documentary Underwater Kemet, and fan lyric understanding — Micdom AI Records 146 BPM — FLIPBOOK",
       "dictionary": {
       "enneh so?": "right? / isn't it?",
       "wahala": "trouble",
@@ -552,61 +538,40 @@ export default {
       "no": "PREVERBAL NEGATOR — pidginized 'a no no afta' = I didn't know",
       "na": "NEGATOR OR SUBJECTIVE MARKER"
 },
-      "extended": {"107 Acres": "EU8044516 — Sovereign Deed", "0x504841": "Pharaoh-Chain ID — Owner 0xCOLONEL — LAW48+44", "Sunken Kemet": "Lost Egyptian civilization beneath Atlantic off West Africa — gold-lit hieroglyph walls half-buried Sphinx kelp obelisks lanterns never out"}
+      "world": "Sunken Kemet — 88 fathoms — Sphinx kelp obelisks lanterns never out — Dehrtay Dog Archive DJ"
     };
 
-    // --- Kolokwa Glossary Endpoints — V28.2 — MUST be before 404 ---
-    if (path === "/v28.0/kolokwa/glossary/json" || path === "/v28.0/kolokwa/json" || path === "/api/kolokwa" || path === "/api/kolokwa/glossary" || path === "/v28.2/kolokwa/json") {
+    if (path === "/v28.0/kolokwa/glossary/json" || path === "/v28.0/kolokwa/json" || path === "/api/kolokwa" || path === "/api/kolokwa/glossary" || path === "/v28.2/kolokwa/json" || path === "/v28.2/kolokwa/glossary/json") {
       return new Response(JSON.stringify({
         version: "28.2",
-        product: "Micdom Kolokwa Glossary v2.0 — Full Lexicon — 512 Terms — Underwater Kemet Edition",
-        codename: "COLONEL | LAW48 — MICDOM AI RECORDS — Sunken Kemet",
+        product: "Micdom Kolokwa Glossary v2.0 — 512 Terms — Underwater Kemet",
         ...KOLOKWA_GLOSSARY,
         updated: new Date().toISOString(),
-        chain: "0x504841 — 0xCOLONEL — LAW48+44",
-        metatron: "275860d9.hermes-toth-agent.pages.dev",
-        world: "Sunken Kemet — 88 fathoms — gold-lit Sphinx — kelp obelisks — lanterns never out — Dehrtay Dog Archive DJ"
-      }), { headers: { ...cors, "Content-Type": "application/json; charset=utf-8", "Cache-Control": "public, max-age=120" } });
+        chain: "0x504841 — 0xCOLONEL — LAW48+44"
+      }), { headers: { ...cors, "Content-Type": "application/json; charset=utf-8" } });
     }
 
     if (path === "/v28.0/kolokwa/glossary" || path === "/v28.0/kolokwa" || path === "/kolokwa" || path === "/v28.2/kolokwa") {
       const dictEntries = Object.entries(KOLOKWA_GLOSSARY.dictionary);
       const dictHtml = dictEntries.slice(0, 120).map(([k,v])=>`<tr><td style="color:#D4AF37;font-weight:800;border:1px solid rgba(212,175,55,.2);padding:6px;font-size:11px">${k}</td><td style="border:1px solid rgba(212,175,55,.2);padding:6px;color:#ffe7a0;font-size:11px">${v}</td></tr>`).join("");
-      const moreCount = dictEntries.length - 120;
-      const bundleHtml = `<div style="border:1px solid #D4AF37;border-radius:10px;padding:12px;margin:6px;background:#111"><div style="font-weight:900;color:#D4AF37">Kolokwa Glossary v2.0 Full — 512 Terms — $7 Solo — Underwater Kemet Edition</div><div style="font-size:.85rem;color:#ffe7a0">Includes 16 core (enneh so?, wahala, gronah, big jue, palm butter, fufu, jollof) + 492 full lexicon (Abuse→Zootin) + Particles (o/oh, ya/yah, menh, eh/ehn, warh, deh/duh, no, na) + ADLIB passthrough Bang grrah Ma — Sunken Kemet world — Sphinx kelp obelisks lanterns never out</div><div style="color:#0f0;font-size:.7rem">Value $91 — Complete Bundle $77 — Save $14 — Story Bible v2 Underwater Kemet</div></div>`;
-      const glossaryPage = `<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Micdom Kolokwa Glossary v2.0 Full — 512 Terms — $7 — Underwater Kemet — COLONEL LAW48</title>
-<style>body{background:#050507;color:#ffe7a0;font-family:Arial;margin:0;padding:20px}.wrap{max-width:1100px;margin:auto}h1{color:#D4AF37;text-shadow:0 0 12px #D4AF37;text-align:center}.asian{color:#D4AF37;text-align:center;font-size:18px;margin:10px}.card{border:1px solid rgba(212,175,55,.28);border-radius:14px;padding:16px;background:#0f0f0f;margin:14px 0}table{width:100%;border-collapse:collapse;margin-top:12px}.pill{border:1px solid #D4AF37;border-radius:999px;padding:3px 8px;margin:3px;font-size:.7rem;display:inline-block}.btn{display:inline-block;padding:12px 18px;border-radius:10px;border:1px solid #D4AF37;text-decoration:none;font-weight:800;margin:4px}.btn-gold{background:linear-gradient(180deg,#ffe7a0,#D4AF37);color:#111}.btn-outline{background:#000;color:#D4AF37}.small{font-size:.85rem;color:rgba(255,231,160,.7)}</style></head><body><div class="wrap">
-<h1>Micdom Kolokwa Glossary v2.0 — Full Lexicon — 512 Terms — Underwater Kemet — COLONEL | LAW48</h1><div class="asian">公益 · 智慧 · 使命 · 服务 · 守护 · 连接 · 米克多姆 · 八十八尊 · 主權代理 — Liberian Kolokwa English — Sunken Kemet — Sphinx — kelp obelisks — lanterns never out — DJ Dehrtay Dog Archive DJ</div>
-<div class="card"><h3 style="color:#D4AF37">THE MOVEMENT: Story Bible v2 — Underwater Kemet Edition — Narrated by DJ Dehrtay Dog</h3><div class="small">Sunken Kemet is a lost Egyptian civilization beneath the Atlantic off the West African coast — Gold-lit hieroglyph walls, half-buried Sphinx with temple door glowing blue between paws, obelisks wrapped in kelp, temple gates, hanging ankh lanterns that never go out — Location 88 fathoms — 88尊 — off Liberia — EU8044516 — 107 Acres seabed + land — Sound 146 BPM Kingdom Rehearsal — water as reverb — fish forming 88 — Dehrtay Dog Anubis Doberman Nemes headdress gold stripes black vest gold chains holding glowing ankh powering MICDOM holographic turntable — Bang grrah Ma bubbles — Mama Hajah diamond-ankh-yacht seal opens gate — LAW48+44 firewall keeps water out — Chain 0x504841 anchors temple — palm butter protection keeps lanterns lit — fufu foundation — jollof covenant</div>
-<div style="margin-top:10px"><span class="pill">512 TERMS</span><span class="pill">UNDERWATER KEMET</span><span class="pill">SUNKEN KEMET</span><span class="pill">SPHINX</span><span class="pill">LIBERIAN KOLOKWA</span><span class="pill">MICDOM AI RECORDS</span><span class="pill">146 BPM</span><span class="pill">0x504841</span><span class="pill">DEHRTAY DOG ARCHIVE DJ</span><span class="pill">Bang grrah Ma</span></div></div>
-<div class="card"><h3>Pricing — Registry@Pharaoh-Conglomerate.org — AMENDED</h3>${bundleHtml}<div style="margin-top:12px"><a class="btn btn-gold" href="https://registry.pharaoh-conglomerate.org" target="_blank">Buy Full Glossary $7</a><a class="btn btn-outline" href="/v28.0/kolokwa/glossary/json" target="_blank">JSON API 512 Terms</a><a class="btn btn-outline" href="/v28.0/kolokwa/glossary/csv" target="_blank">CSV Drop-in</a><a class="btn btn-outline" href="/v28.2/kemet/world/json" target="_blank">Kemet World JSON</a></div></div>
-<div class="card"><h3>Dictionary — First 120 of 512 — Full via JSON — Underwater Kemet Edition</h3><table><thead><tr><th style="border:1px solid #D4AF37;padding:8px;color:#D4AF37;text-align:left">Kolokwa</th><th style="border:1px solid #D4AF37;padding:8px;color:#D4AF37;text-align:left">Meaning — For Fans / Caption Engine</th></tr></thead><tbody>${dictHtml}</tbody></table><div class="small" style="margin-top:10px">Showing 120 of ${dictEntries.length} — ${moreCount} more in JSON — Full includes Abuse→Zootin — Zoe=traditional priest, Susu=rotational savings, Waterside=Monrovia market, Wata cow=pygmy hippo — Particles o/oh ya/yah menh eh/ehn warh deh/duh no/na — Bang grrah Ma ADLIB passthrough — Underwater Kemet world</div></div>
-<div style="text-align:center;font-size:.6rem;color:rgba(212,175,55,.3);margin-top:20px">COLONEL | LAW48 — Micdom Kolokwa Glossary v2.0 Full — 512 Terms — Underwater Kemet — Sovereign Proprietary — Pharaoh-Chain 0x504841 — LAW48+44 — © 2026 Pharaoh Conglomerate — Bang grrah Ma ADLIB passthrough — Sunken Kemet — Sphinx kelp obelisks lanterns never out — IT IS WRITTEN</div>
-</div></body></html>`;
-      return new Response(glossaryPage, { headers: { ...cors, "Content-Type": "text/html; charset=utf-8" } });
+      const page = `<!DOCTYPE html><html><head><meta charset="utf-8"><title>Kolokwa Glossary v2.0 Full 512 — Underwater Kemet</title>
+<style>body{background:#050507;color:#ffe7a0;font-family:Arial;padding:20px}h1{color:#D4AF37}table{width:100%;border-collapse:collapse} .pill{border:1px solid #D4AF37;border-radius:999px;padding:3px 8px;margin:3px;font-size:.7rem;display:inline-block} .btn{display:inline-block;padding:12px 18px;border-radius:10px;border:1px solid #D4AF37;text-decoration:none;font-weight:800;margin:4px} .btn-gold{background:linear-gradient(180deg,#ffe7a0,#D4AF37);color:#111} </style></head><body>
+<h1>Micdom Kolokwa Glossary v2.0 — 512 Terms — Underwater Kemet — COLONEL LAW48</h1><div>Sunken Kemet — gold-lit Sphinx kelp obelisks lanterns never out — DJ Dehrtay Dog Archive DJ — Bang grrah Ma</div>
+<div>${dictEntries.length} terms — <a href="/v28.0/kolokwa/glossary/json">JSON</a> — <a href="/v28.0/kolokwa/glossary/csv">CSV</a></div>
+<table><thead><tr><th>Kolokwa</th><th>English</th></tr></thead><tbody>${dictHtml}</tbody></table>
+<div>... +${dictEntries.length - 120} more in JSON</div>
+</body></html>`;
+      return new Response(page, { headers: { ...cors, "Content-Type": "text/html; charset=utf-8" } });
     }
 
-    if (path === "/v28.0/kolokwa/glossary/csv" || path === "/api/kolokwa/csv" || path === "/v28.2/kolokwa/csv") {
-      const csv = ["Kolokwa,English,Type", ...Object.entries(KOLOKWA_GLOSSARY.dictionary).map(([k,v])=>`"${k.replace(/"/g,'""')}","${String(v).replace(/"/g,'""')}","${["Bang","grrah","Ma"].includes(k)?"ADLIB":"WORD"}`)].join("\n");
-      return new Response(csv, { headers: { ...cors, "Content-Type": "text/csv; charset=utf-8", "Content-Disposition": "attachment; filename=Micdom_Kolokwa_Glossary_v2.0_Underwater_Kemet.csv" } });
+    if (path === "/v28.0/kolokwa/glossary/csv" || path === "/api/kolokwa/csv") {
+      const csv = ["Kolokwa,English,Type", ...Object.entries(KOLOKWA_GLOSSARY.dictionary).map(([k,v])=>`"${k.replace(/"/g,'""')}","${String(v).replace(/"/g,'""')}"`)].join("\n");
+      return new Response(csv, { headers: { ...cors, "Content-Type": "text/csv; charset=utf-8", "Content-Disposition": "attachment; filename=Kolokwa_Full.csv" } });
     }
 
-    if (path === "/v28.2/kemet/world/json" || path === "/api/kemet/world" || path === "/v28.0/kemet/world") {
-      return new Response(JSON.stringify({
-        version: "28.2",
-        world: "Sunken Kemet — Underwater Kemet Edition — THE MOVEMENT Story Bible v2",
-        narrator: "DJ Dehrtay Dog — The Archive DJ — ASA-003 Gimel 256 — Bang grrah Ma",
-        location: "Atlantic off West African coast — off Liberia — 88 fathoms — 88尊 — EU8044516 — 107 Acres One Chain Zero Heidelberg",
-        visuals: ["Gold-lit hieroglyph walls", "Half-buried Sphinx with temple door glowing blue between paws", "Obelisks wrapped in kelp — barnacles as hieroglyphs", "Temple gates — hanging ankh lanterns that never go out", "MICDOM holographic turntable — floating on seabed — blue light — 146 BPM", "God rays from surface — your image reference", "Schools of fish forming 88 — angelic council", "Bubbles Bang grrah Ma"],
-        lore: "Mama Hajah diamond-ankh-yacht seal opens gate — palm butter protection keeps lanterns lit — fufu foundation — jollof covenant — LAW48+44 firewall keeps water out — 0x504841 anchors temple",
-        glossary: "512 terms — enneh so? wahala gronah big jue da pekin dem palm butter fufu jollof + Abuse→Zootin + particles o/oh ya/yah menh eh/ehn warh deh/duh no/na + Bang grrah Ma ADLIB passthrough",
-        products: KOLOKWA_GLOSSARY.pricing,
-        chain: "0x504841 — 0xCOLONEL — EU8044516 — LAW48+44",
-        metatron: "275860d9.hermes-toth-agent.pages.dev",
-        updated: new Date().toISOString()
-      }), { headers: { ...cors, "Content-Type": "application/json; charset=utf-8" } });
+    if (path === "/v28.2/kemet/world/json" || path === "/api/kemet/world") {
+      return new Response(JSON.stringify({version:"28.2", world:"Sunken Kemet — Underwater Kemet — 88 fathoms — Sphinx kelp obelisks lanterns never out", narrator:"DJ Dehrtay Dog — Archive DJ — Bang grrah Ma", visuals:["Gold-lit hieroglyph walls","Half-buried Sphinx temple door glowing blue","Obelisks wrapped in kelp","Ankh lanterns never out","MICDOM holographic turntable","God rays"], chain:"0x504841 — 0xCOLONEL — LAW48+44", glossary:KOLOKWA_GLOSSARY.count}), { headers: { ...cors, "Content-Type": "application/json" } });
     }
-
 
 
         if (path === "/v28.0/videos/json" || path === "/v27.1/videos/json" || path === "/v27.5/videos/json" || path === "/api/videos") {
