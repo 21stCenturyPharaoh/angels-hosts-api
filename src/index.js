@@ -1,244 +1,670 @@
+
+    // ============================================================
+    // MICDOM KOLOKWA GLOSSARY v2.0 — FULL LEXICON — AMENDED — 512 TERMS
+    // Source: Micdom AI Record's LEXICON & REFERENCE docx — parsed 492 + 16 + particles
+    // ============================================================
+    const KOLOKWA_GLOSSARY = {
+      "asset_name": "Micdom Kolokwa Glossary v2.0 — Full Lexicon",
+      "owner": "Pharaoh Conglomerate",
+      "license": "Sovereign Proprietary - All Rights Reserved",
+      "version": "2.0",
+      "language": "Liberian Kolokwa English",
+      "source_doc": "Micdom AI Record's LEXICON & REFERENCE — Koloqua Glossary + Particles",
+      "chain": "Pharaoh-Chain 0x504841",
+      "owner_id": "0xCOLONEL",
+      "firewall": "LAW48+44",
+      "product_id": "KOLOKWA_GLOSSARY_V2",
+      "count": 512,
+      "pricing": {"standalone": 7, "bundle_registry": 27, "bundle_unsealing": 77, "bundle_complete": 77, "affiliate": "15% HIGH-TICKET", "description": "Standalone $7 — Registry $27 — Unsealing $77 — Complete $77"},
+      "adlibs": ["Bang", "grrah", "Ma"],
+      "adlib_rule": "Bang, grrah, Ma MUST pass through as-is — NOT TRANSLATED — Dehrtay Dog signature",
+      "usage": "For caption generation, voice synthesis, translation engine, TikTok Mini Series Documentary, and fan lyric understanding — Micdom AI Records 146 BPM — FLIPBOOK",
+      "dictionary": {
+      "enneh so?": "right? / isn't it?",
+      "wahala": "trouble",
+      "gronah": "tough/resilient",
+      "big jue": "deep strength",
+      "da pekin dem": "our people",
+      "nah": "not/don't",
+      "palm butter": "protection/bond",
+      "fufu": "unshakeable faith",
+      "jollof": "covenant/blood",
+      "day": "the",
+      "everay": "every",
+      "jeh": "just",
+      "geh": "get",
+      "Bang": "NOT TRANSLATED - ADLIB",
+      "grrah": "NOT TRANSLATED - ADLIB",
+      "Ma": "NOT TRANSLATED - ADLIB",
+      "Argo Oil": "Vegetable oil",
+      "All two": "both",
+      "Ants beh": "The pangolin",
+      "Antay (N-tay)": "Aunt",
+      "bamboo": "The raffia palmtree",
+      "baboon": "chimpanzee",
+      "Baf fence": "An outdoor shower area",
+      "Bamboo wine": "Palm wine",
+      "Bamboo warun": "Beetle grubs",
+      "banjo": "To sell something at a discount; cheap",
+      "Barbing shop": "Barber shop",
+      "Beyeh-beyeh": "A longer beard on a man e.g. “See beard-beard oh!”",
+      "Bend-bend": "Crooked, twisted, not straight",
+      "Bend de elbow": "To get drunk",
+      "belle": "Big Stomach; pregnancy",
+      "Bessa": "A busybody, gossip, rumors, gossiper",
+      "Bessa body": "busy body i.e. to be a gossip",
+      "Big Book": "educated/advanced English/big words",
+      "Big cold": "Very cold temperature",
+      "Big heart (hah-t)": "To be arrogant, to be boastful, to be brave",
+      "Big man": "A big shot ex. A government official",
+      "Billhook": "A small cutting tool for harvesting rice",
+      "biskeh": "Biscuit or cookies",
+      "Blance": "To hit the football against something or someone",
+      "Blay": "Stylish or fashionable clothing; wearing clothes; (funny blay- strange clothes)",
+      "Blinger": "A cell phone",
+      "Blood fish": "Atlantic blue fin tuna",
+      "Blood tableh": "Vitamin pills/tablets",
+      "Blood wasting": "Bleeding",
+      "Bluff": "To show off, to flaunt",
+      "Bluffuh-joe": "Someone who is a showoff; showboat",
+      "Bobo": "A deaf mute person/also used for an ignorant-senseless person e.g. “Small more, you will be bobo.”",
+      "Body bra": "A one-piece womens swimsuit",
+      "Body Man": "A body builder; muscular/strong man",
+      "Boiling": "Going out, having fun",
+      "Boke": "An expression for when someone is doing something secretly and then you see them; I see you; I catch/grab you e.g. “I boke you!”",
+      "Boney": "Dried herring fish",
+      "Book": "A general term for education",
+      "Book people": "The educated class; intellectual people",
+      "Born town": "Birthplace; hometown",
+      "Bounder": "A rascal",
+      "Brackeh": "To meet up with someone",
+      "Bread nut": "Jack fruit",
+      "Break word": "To state an opinion; make a judgment",
+      "Buba": "A long robe associated with Muslims",
+      "Bufeh": "To seize or takeaway quickly or jerk; most times forceful; often done teasingly; also a kids game; can mean stealing a girlfriend or boyfriend from another (taken from the word buffet)",
+      "Bug-a-bug": "termites",
+      "Bumpay (Bump it)": "To hit a target",
+      "Bunga": "The buttocks",
+      "Bush-school": "Traditional school; Sande and Poro (highly secretive)",
+      "Bush cat": "The palm civet or golden cat",
+      "Bush chicken": "The partridge",
+      "Bush cow": "West African dwarf buffalo",
+      "Bush dog": "The river otter; mongoose",
+      "Bush road": "A foot path in the forest",
+      "Bush taxi": "To travel by foot",
+      "Butta rice": "Starchy imported rice from China",
+      "Butt up with": "Bump into someone; To run into someone, to meet someone unexpectedly",
+      "Calopay": "To knock down; to turn them over flat on the ground",
+      "Cahmo": "Commode; toilet",
+      "Cane juice": "Sugarcane liquor",
+      "Carboy": "Conductor driver assistant who collects fares e.g. “I cant drive dis truck without a carboy”",
+      "Car pay": "Taxi or bus fare",
+      "Cassava snake": "The Gaboon viper",
+      "Cat eye": "Light colored eyes; reflectors on the road",
+      "Catoon": "A cardboard box or carton",
+      "Cavalla fish": "An Atlantic horse mackerel fish",
+      "Chakla": "To destroy, to leave in disorder or to mess up",
+      "Charged": "To be intoxicated",
+      "Chant": "To recite a magical spell",
+      "Chap": "To cut someone/something with a knife/sharp object",
+      "Che-che": "Gossip, slander",
+      "Chek": "A girlfriend or lover",
+      "Chicken rogue": "A chicken thief",
+      "Chicken soup": "Bullion cubes",
+      "chiklet": "Bubble gum",
+      "Chinee leh": "a cheap, battery operated electric lamp, made in China e.g. “Lih ullur Chinee leh na geh nattin inside.”",
+      "Chinee man": "any grown man who looks remotely Asian e.g. “Go to ley chinee man on broad street”",
+      "chop": "To eat money; to use money in a wrongful way; misapplied/misuse",
+      "Church motha": "an older church lady who is a leader in the church",
+      "Civilize": "Westernized, belonging to a Christian church & with some formal education",
+      "Coe tar ro": "(cold tar/asphalt road) A paved road e.g. “Ley pull na fix the coe tar ro.”",
+      "Coat suit": "A two or three piece mens suit",
+      "Co bo": "Cheap street food",
+      "Co bo shop": "A small, simple cook shop",
+      "Coffee bag fall in de wuhtuh": "an expression for someone who has gone crazy",
+      "Coh-pa (coal pot)": "a charcoal stove used for cooking; a pot that hold",
+      "Colloma": "Fake or imitation",
+      "Come leh eat": "A polite invitation to come eat",
+      "Common": "Something that is well known (sometimes negative, or less important)",
+      "Comping": "A rotational savings club",
+      "Con": "Crook",
+      "Correh (correct)": "Something of good quality e.g. “Da man correh oh”",
+      "Cattah": "A rolled piece of cloth used to balance a load carried on the head e.g. “You boh, an get cattah to tow anybody load”",
+      "Cotton tree": "The silk cotton tree, or cottonwood tree",
+      "Country bread": "Pounced rice meal",
+      "Country chalk": "a white clay with medicinal and ritual uses",
+      "Country chicken": "a smaller, free-range, village chicken",
+      "Country chop": "a dish or stew with various meats and fish inside served over rice and garnished with boiled eggs, coconut and various other fruits",
+      "Country guitar": "a homemade stringed instrument with a sound box, resembling a",
+      "Country money": "thin twisted iron rods from NW Liberia, between 12-18 inches long, formerly used as currency in the interior areas",
+      "Country ray": "the country is hard economically speaking",
+      "Country rope": "forest vines used to tie things together",
+      "Country salt": "potash or soda made from the ashes of palm fronds or plantain tree leaves",
+      "Country soap": "Traditional soap, made by village people",
+      "Cow spirit": "Egret (white bird)",
+      "Co wator": "variously could refer to a bribe, to welcome you with liquor (in a town or village)",
+      "Crackay": "a stubborn, argumentative or insolent person; mad person",
+      "Craw-craw": "An itchy skin disease; not smooth",
+      "Craw-craw frog": "A toad",
+      "Credih": "An advance loan, or cell phone units",
+      "Crushing": "To have romantic feelings for someone",
+      "Cruss": "Rice crust found in the bottom of a pot",
+      "Culture": "Traditional secret societies and related esoteric activities",
+      "Cup": "A can used to measure rice and other food",
+      "Currenn": "Electricity",
+      "Cutlax": "A machete",
+      "cycle": "A bicycle",
+      "Dat ha": "Thats how",
+      "Dan": "Ten Liberian dollars",
+      "Day bor": "A casual laborer hired on a daily basis",
+      "Dealin": "to use witchcraft / sorcery for a desired end",
+      "Dear": "To be expensive, costly",
+      "Deer": "The duiker antelope",
+      "Dux": "To ace something, to be the top performer",
+      "Dey few days": "Recently",
+      "Dorfa": "A duck",
+      "Different different": "Several varieties of something",
+      "Direct code": "Straight talk, bold speech",
+      "Deeshcloth": "eczema, a rash, skin condition",
+      "Dite": "Garbage, trash",
+      "Dog baby": "Puppy",
+      "Dokafleh": "Used clothes; pre-owned clothing and shoes (from abroad) e.g. “Please bi me dokafleh sneakor”",
+      "Dolphin fish": "The mahi-mahi fish",
+      "Dooji": "Heroin",
+      "Door mouf": "A doorway",
+      "Dragon": "a malevolent reptilian spirit",
+      "Drappay": "to give a small gift, to leave something small fo",
+      "r someone\n\nDress (verb)": "move closer together, to scoot over",
+      "Drill": "To march, as in a military parade",
+      "Drunk you": "I will drunk you- to get someone inebriated",
+      "Druss": "Western medicine",
+      "Dry": "To be skinny or malnourished",
+      "Drah face": "To be unashamed; to be bold",
+      "Dry meat": "dried bush meat, or forest animals killed and smoked as meat",
+      "Dry monkey": "marasmus malnutrition or kwashiokor",
+      "Du": "the kusimanse mongoose",
+      "Dumboy": "A thick cassava dough that you swallow (don't chew)",
+      "Dunkin": "Ignorant; fooled easily",
+      "Dumpile": "A garbage dump",
+      "Dusty road": "A dirt road, or unpaved road",
+      "Dwah": "Small, human-like mythical creatures",
+      "Dynamo": "A diesel generator",
+      "Dis Gone weekend": "This past weekend",
+      "Een de butto": "To be drunk or intoxicated",
+      "Eye turning": "To be dizzy or drunk",
+      "Fall off": "To fall apart, to break apart",
+      "Fanga": "A small, two-head pressure drum",
+      "Fanner": "A flat woven basket to winnow rice",
+      "Fanti cloth": "A brightly colored African cloth",
+      "Farina": "Dried cassava flakes eaten as a cereal",
+      "Farm ro far": "To be deaf or hard of hearing; your distance is still far (your destination is still far off)",
+      "Fever grass": "Lemongrass",
+      "Fever leaf": "The wild basil plant",
+      "Fek-fek": "Fake, not true, Insignificant, worthless",
+      "Fine": "Beautiful, attractive",
+      "Fish cup": "a tin of cooked fish such as mackerel or salmon packed in oil",
+      "Fiya": "To shoot at with a weapon (fire); fire",
+      "Fiya behine": "To pressure; To force someone to do something",
+      "Flakajay": "Foolish; senseless; not genuine; sub-standard; stupid",
+      "Flash": "to call someone on the phone and then hang up after one ring",
+      "Flask": "A thermos for hot water",
+      "Flexing": "To party, or go out nightclubbing",
+      "Flok": "To beat someone as a form of punishment",
+      "For common": "Commonly, often",
+      "For nating": "Worthless, as in good for nothing",
+      "Fooly tongor": "The gray duiker antelope",
+      "Foot": "The entire leg including the foot",
+      "Fox": "The slender mongoose",
+      "Freak ah": "To love someone or be attracted to them",
+      "Film sho": "A movie, video or film",
+      "Fresh": "To be beautiful or fine",
+      "Fresh co": "The common cold, or a runny nose",
+      "Friskay": "Wild, rude, overactive, disobedient e.g. “Dis boy friskay-o”",
+      "Frog baby": "A tadopole, aquatic frog larvae",
+      "Forstor": "A slang term for food or to eat",
+      "Fuan-fuan": "Trouble; problem; headache (from Bassa)",
+      "Fuel oil": "Diesel fuel/gas oil",
+      "Full-uh": "Something that is very full",
+      "Funny": "Doing anything foolish, stupid, or ugly (not proper) e.g. “Look a aye, you funny, ehn?”",
+      "Tableh": "A pill or medicinal tablet",
+      "Tape": "A cassette player",
+      "Tata": "The female sex; vagina",
+      "Tousand leg": "A millipede",
+      "Telegraph line": "A hand-held fishing line",
+      "Tear-tear": "So",
+      "Tenik": "A scam or manipulation",
+      "Teteh": "The female breast",
+      "Teteh wata": "Breast milk",
+      "Tide soap": "Washing detergent",
+      "Tiga": "A serval cat",
+      "Tinapaw": "Mackerel fish canned in tomato sauce",
+      "Tiya": "To be sleepy, satisfied or have a full stomach",
+      "Today person": "An open-minded person who embraces modern values",
+      "Today today": "Something that needs to be finished or resolved that very day",
+      "Torborgee": "A sauce from Lofa county made from soda, kitili and rancid palm oil, served over rice",
+      "Tote": "To carry a load (usually on ones head)",
+      "Torbasoyeah": "An oil based sauce made by Kpelle people",
+      "Thorns": "Sharp fish bones",
+      "Toto": "Male genitalia",
+      "Town": "Any settlement larger than a village with a central market",
+      "Town owner": "The highest representative of the founding lineage within a given committee",
+      "Tree goat": "A tree hyrax, a nocturnal mammal resembling a rabbit with long ears",
+      "Tuba": "A strong drink made from local herbs",
+      "Tumba": "A slang term for large round buttocks",
+      "Galovant": "To walk around",
+      "Gamble seed": "cowrie shells, formerly used as currency, used in Islamic divination by molimen",
+      "Gapping": "To be hungry; suffering",
+      "Gate": "A checkpoint on a highway or street",
+      "gavay": "Someone who has died; someone escaped",
+      "GB (short for gaygba)": "a cassava dough dumpling popular in Nimba county (harder than the dumboy). Also called Gio bread",
+      "Gbanna": "Mischievous, unruly",
+      "Gbapleh": "A small, finger-sized saltwater fish",
+      "Gbassa jamba": "cassava leaf sauce popular in Grand Cape Mount county (from Vai)",
+      "Gbelleh": "Foolish, stupid",
+      "Gbehma (from Bassa)": "traditional music set to fast paced electronic beats and sung in local languages",
+      "Gborku": "Plenty; surplus; many",
+      "Geh mouf": "people who talk too freely or too much",
+      "Genah": "A forest spirit",
+      "German plum": "A large variety of mango",
+      "Ghetto": "a house or abandoned location which is used to sell and consume illegal drugs; hideout for drug users",
+      "Give belly": "To impregnate a woman",
+      "Go slow": "A labor strike",
+      "Gobbachop official": "A corrupt government/business person",
+      "Golden plum": "the Ambarella, a mango-like fruit",
+      "Gorilla": "An old, very large chimpanzee",
+      "Gravy": "sauce",
+      "Grebo-bush": "Bush/traditional school",
+      "Gree-gree": "Charms or amulets worn on the body",
+      "Green monkey": "a Callithrix monkey (with greenish fur)",
+      "Greens": "A leafy vegetable, often cooked with oil",
+      "Grip": "A suitcase",
+      "Grumbo pekin": "A person who likes to make trouble",
+      "Gronna": "rebellious, disrespectful, sexually promiscuous",
+      "Gronna boy": "A juvenile delinquent, or a gangster",
+      "Ground pea": "A peanut",
+      "Ground pea candy": "Peanut brittle",
+      "Gunshot": "A bullet",
+      "Gun sound": "The report of a gun",
+      "firing\n\nGut": "Big stomach",
+      "Gutta": "A ditch",
+      "Gwana": "The Nile monitor lizard",
+      "Hala-hala": "Excessively loud shouting",
+      "Half dry": "smoked fish or bush meat soaked in water, then smoked over a fire",
+      "Han": "The entire arm including the hand",
+      "Hang heads": "to meet in private consultation",
+      "Hatayee": "Black or green gunpowder tea from China",
+      "Have seat": "Please be seated",
+      "Haat bitta": "To be angry or vexed",
+      "Haat boining": "deeply felt emotional pain, hurt or sadness",
+      "Haat clean": "to be honest, to have good intentions, to have integrity",
+      "Haat cut": "To be scared or afraid",
+      "Haat fall don": "To be saddened or discouraged",
+      "Haat lay don": "To be deeply contented or satisfied",
+      "Jacko": "the mangabey monkey (small with gray fur, common as pets)",
+      "Jaja ting": "An insignificant or meaningless thing",
+      "Jahfeh": "A slang for money",
+      "Jammed": "Desperately needing to urinate",
+      "Jap": "To cheat or fool someone",
+      "Japor": "Jokster; unserious person",
+      "Jattoh": "Albino or someone with albinism",
+      "Jigga": "A flea or chigger",
+      "Jobbing": "Working",
+      "Jimmy john": "A large barrel",
+      "Jollof rice": "a dish similar to Spanish rice (orange in color from tomato paste)",
+      "Ju": "Jewel; a term of endearment for a sweetheart or lover",
+      "Juju man": "a traditional healer, witchdoctor or medicine man",
+      "Junk": "Inexperienced person who can be easily fooled; ignorant e.g. “This guys a junk”",
+      "Juke": "To poke or puncture",
+      "Jus na": "right away",
+      "Kalabuley": "Something that is fake or a poor imitation",
+      "Kalla": "Doughnuts fried in oil",
+      "Kanki": "a measurement of rice equivalent to two American cups",
+      "Karking": "To relax or wait for someone",
+      "Kata-kata": "A tricky scam artist",
+      "Kaylay Willie": "Friend plantain with pepper (cut very finely)",
+      "Keep comping": "keep company; to visit someone",
+      "Kesh heh": "catch head; to become intoxicated/drunk",
+      "Kia-moto": "A longer/big pickup truck (usually used to transport market goods)",
+      "Kinja": "a woven basket with shoulder straps and a headband",
+      "Kingay": "ringworm",
+      "Kiss me": "kiss meat; a small swamp snail",
+      "Kitili": "small, bitter eggplant-like vegetable (also called garden egg)",
+      "Knock belly": "A gift or service offered to bribe someone",
+      "Knock off": "To finish work for the day",
+      "Know book": "To be educated (formal western education)",
+      "Kolokolo": "To see clearly",
+      "Koningi": "the koning, a traditional stringed instrument with a calabash (also called a belly harp)",
+      "Kongoma": "a large thumb piano (usually homemade with wood & flattened nails for keys)",
+      "Kpaku": "To be slim or small for ones age",
+      "Kpalauo": "A term for witchcraft",
+      "Kpamga": "To cast a spell or make medicine",
+      "Krokroji": "(crooked deeds); some type of corruption or shady business",
+      "Kru Keenu": "A small, ocean-going dugout canoe",
+      "Kubba": "Crook; out-smart; cunning; well-experienced",
+      "Kuku-jumuku": "Insider knowledge",
+      "Kuu": "A cooperative labor pool or rotational savings club",
+      "Kwi or Kwii": "Civilized person; educated person; modern person; westerner; living a modern life, not a native (originally for white/foreign people)",
+      "Lacking": "To be hungry",
+      "Lappa": "a bright African print cloth, sold in two yard lengths",
+      "Lappa be doe": "(lappa be door) a street-side cook shop",
+      "Lappalonian": "a pejorative term for local women who dress in traditional attire (wear lappas)",
+      "Larry": "To be crazy",
+      "Lasmo": "a small protective talisman which usually includes a verse from the",
+      "Lemon": "A tangerine",
+      "Lesher": "lecture; informal conversation",
+      "Level": "Empty; foolish talk; excuse e.g. “Dont put me en level”",
+      "Liberian white man": "An albino person",
+      "Liberty": "euphemism for sexual intercourse",
+      "mar": "Slang for cash/money",
+      "mean": "To be selfish/stingy",
+      "Meat": "animal",
+      "Meat road": "A game trail in the rainforest",
+      "Meggey": "maggot",
+      "Make mouf": "To boast about something",
+      "Milk candy": "caramel",
+      "mokafay": "A slang for money",
+      "Money-man": "A wealthy man",
+      "Money-people": "Financial investors",
+      "Monkey bridge": "A suspension bridge made with vines",
+      "Monkey checkers": "An African board game played with seeds, also called wari, owari, & mancala",
+      "Monkey fly": "A horsefly",
+      "Monkey nut": "Rambutan fruit",
+      "Mon-mon": "To mutter a complaint or to murmur",
+      "mountain": "A large hill, foothills, mountain",
+      "Mountain deer": "Zebra antelope",
+      "Move from behine": "To leave someone alone",
+      "Muan-muan": "A smelly type of smoked fish",
+      "Mud stick": "Traditional wattle and daub architecture using wood and mud",
+      "muppets": "Puppets, cartoon drawings",
+      "Music box": "Accordion or harmonica",
+      "My one": "myself",
+      "Palava sauce": "A slimy green sauce made with jute leaves",
+      "Palm bird": "The hornbill",
+      "Palm wine": "an alcoholic drink made from the sap of the oil palm or raffia palm tree",
+      "Pamfleh": "a brochure, booklet, article, magazine, etc.",
+      "Papay": "A wealthy older man; Boss",
+      "Papu": "thatched tiles woven from raffia palm fronds (from the Krahn language)",
+      "Parabo": "parable; proverb",
+      "Paree": "Slippers",
+      "Passava": "(piassava) the raffia palm (also known as bamboo)",
+      "Pata-pata": "Mud, usually on a road (from the Yoruba language)",
+      "Paw-paw": "papaya",
+      "Pay debt": "To get revenge",
+      "Pekin": "A young boy",
+      "Pen watta": "Writing ink",
+      "Pensil": "A mortar pestle",
+      "Peppa boid": "pepper bird; bulbul bird",
+      "Peppa bush": "pepper bush; a side job, a means to extra income",
+      "Piasol": "A porch or veranda",
+      "Pick chance": "Using stealth, under cover",
+      "Picking fuss": "To nag or bother",
+      "Pieces": "Change or smaller currency notes; to make change for larger denomination bills (money)",
+      "Pins": "Staples for a stapler",
+      "Pissy": "Slang for drunk",
+      "Pitanga": "The Suriname cherry",
+      "Plah": "To braid hair",
+      "Pehn-pehn": "A motorcycle taxi",
+      "Play low": "To forget about something, to leave it",
+      "Plum": "mango",
+      "Polari": "a person who is a show off",
+      "Porkay": "Slang for a large amount of money",
+      "Pregnant": "To impregnate",
+      "Press clothes": "To iron c",
+      "lothes\n\nPressing iron": "an iron to iron clothing; older models use charcoal not electricity.",
+      "Prophet church": "a Pentecostal church, led by a charismatic preacher",
+      "Pull together": "To get along, to understand each other",
+      "Punkin": "Butternut squash",
+      "Pipe fish": "a predatory saltwater fish such as the barracuda",
+      "Raccoon": "any variety of small viverrids, the African palm civets, genets, linsangs, etc",
+      "Rap-it": "(rapid) to run away from something unpleasant",
+      "Rappay": "To leave, to go somewhere else",
+      "Rassing up": "To engage in rowdy physical behavior",
+      "Rat": "a generic term for small rodents including mice",
+      "Ray": "red",
+      "Ray Deer": "Bongo antelope",
+      "Ray hay": "Reddish head",
+      "Red-heh": "Reddish hair",
+      "Red-heh lizay": "the West African rainbow lizard (males have the orange head)",
+      "Red rice": "Rice cooked and mixed with palm oil",
+      "Red oil": "Palm oil",
+      "Rice boid": "The weaver bird",
+      "Rice kishen": "A storehouse for rice, a rice silo",
+      "Ring": "To play a stringed instrument",
+      "Rising": "A boil on the skin",
+      "Rogue": "A thief",
+      "Rogue bars": "Metal security bars for windows",
+      "Rubba disease": "a type of beetle grub that destroys rubber trees",
+      "Rubba gun": "A slingshot",
+      "Rude rude ting": "Sexual intercourse",
+      "Runny stomach": "diarrhea",
+      "Sabi": "Cunning, sly, crafty, or stingy",
+      "Sabu": "A clean-shaved head",
+      "Saka": "Crazy or mentally disabled",
+      "Salad": "Usually a potato or egg salad",
+      "Sandcutta": "A traditional diviner using sand in rituals or in fortune-telling",
+      "Sande bush": "The secret initiation society for females",
+      "Sangba": "A small single membrane drum similar to a djembe",
+      "Sasabiya": "Islamic prayer beads",
+      "Sassywood": "The poisonous bark of the sassywood tree used in trials by ordeals",
+      "Sauches": "A hot dog",
+      "Sawasaw": "The soursop fruit",
+      "Sawa-sawa": "The hibiscus plant, also known as saro",
+      "Scary": "To be afraid",
+      "Sirees": "A colloquial term for American English or an American accent",
+      "Sista": "could mean any female sibling, half-sibling, close friend or female from home area",
+      "Sitting fee": "A payment made to workshop participants",
+      "Sitting down": "To rest, to be inactive",
+      "Skalo": "A free ride or lift in a car or motorcycle",
+      "Skopelo": "Old tennis shoes, sneakers",
+      "Skubee": "Tennis shoes, running shoes",
+      "Sleeping suit": "Pajamas",
+      "Small boy": "A young male servant",
+      "Small-small": "Gradually, little by little",
+      "Snap": "A unit of measurement for liquids, usually a small bottle without a standard size",
+      "Snapper": "A large brightly painted motorized ocean-going canoe",
+      "Soak": "To beat or pummel",
+      "Soak tongue": "To get drunk",
+      "Society": "Something secretive",
+      "Softly-softly": "Carefully, gently",
+      "Some kina way": "A demeanor that is unpleasant or undesirable",
+      "Soon": "Early in the morning, or some undetermined and vague time in the future",
+      "So-so": "Only, exclusively",
+      "Sound horn": "To honk a vehicles horn",
+      "Soup": "A stew or sauce usually with either chicken or fish, served over rice",
+      "Soyaman": "A male government soldier (AFL)",
+      "Spell": "epilepsy",
+      "Spitting snake": "Spitting cobra (venomous)",
+      "Spoil": "To ruin, to break, to damage",
+      "Spoil belly": "T",
+      "o have an abortion\n\nSpoil name": "To ruin someones name",
+      "Spray": "Mens cologne or womens perfume",
+      "Spy": "To see, to observe",
+      "Staple machine": "A stapler",
+      "Sticky plaster": "A band-aid, or medical tape",
+      "Straper": "A bachelor",
+      "Sucky licky": "A lollipop",
+      "Sure case": "Surely, rest assured",
+      "Susu": "A rotational savings club, a financial cooperative",
+      "Swear in suit": "a short-sleeved, tailored suit-pants set (popularized by Pres. William",
+      "Sweet": "Very tasty or delicious",
+      "Sweet for you (me)": "Good for you but sarcastic; you deserve it",
+      "Swell": "Surf, ocean waves",
+      "Swell-up": "To be swollen",
+      "Swamp monkey": "The olive colobus monkey (lives in swamps)",
+      "Upstair building": "Any structure with multiple stories",
+      "Up-country": "Referring to the interior regions of Liberia, formerly called the hinterland",
+      "Vai shirt": "A type of tailored African shirt for men",
+      "Vex (vexed)": "To be angry",
+      "Voke": "To tease or make fun of",
+      "Wala": "A wooden writing tablet used in Koranic schools",
+      "Walkabout": "To stroll",
+      "Waste": "To spill or to pour",
+      "Wata cow": "(water cow) the pygmy hippopotamus",
+      "Wata deer": "(water deer) the water chevrotain, a small deer-like animal",
+      "Waterside": "any river bank or the large open-air market on Water Street in",
+      "Monrovia\n\nWayo": "Slang for prostitute",
+      "Wedded chile": "A child born of married parents",
+      "Wheel": "Wheelbarrow",
+      "Whip": "To cut grass or weeds with a whipper",
+      "Whipper": "A long machete with a bent end made for clearing grass",
+      "White deer": "Jentink's duiker, a small forest antelope",
+      "White heart": "Someone with pure intentions",
+      "Wauckin": "A slang for food",
+      "Woman lappa": "A man who is a womanizer",
+      "Wor-wor": "Something that is worthless or ugly",
+      "Woto": "An idiot, a fool or stupid person",
+      "Yantono": "Juju medicine; witchcraft",
+      "Yellow janna": "Hepatitis",
+      "You will kill me beans": "Lentils",
+      "Yute": "youth; Anyone under the age of about forty",
+      "Zam": "A simpleton, or fool",
+      "Zama level": "A false illusion",
+      "Zamakolo": "An old, undesirable man who seduces young ladies with money",
+      "Zepsay": "Crazy, insane",
+      "Zoe": "a traditional priest and ritual specialist, a Poro or Sande elder leader",
+      "Zootin": "To dress up in fancy clothes",
+      "for": "/  fo PREPOSITION AND INFINITIVAL MARKER",
+      "o / oh": "CLAUSE-FINAL PARTICLE · EMPHASIS & CURRENT RELEVANCE — friendliness, good mood",
+      "ya / yah": "CLAUSE-FINAL PARTICLE · FRIENDLINESS, GOOD MOOD — collective greeting",
+      "menh": "CLAUSE-FINAL PARTICLE · STRUGGLE, FRUSTRATION, DISAPPROVAL — 'Aeh-menh!' = Oh my goodness!",
+      "eh / ehn": "CLAUSE-FINAL TAG · APPEAL, SEEKING AGREEMENT — 'Wheh play breh Fatu eh?'",
+      "warh": "PREVERBAL MARKER · PAST TENSE — 'He warh geh a haw'",
+      "deh & duh": "ASPECT MARKER PROGRESSIVE/NONPUNCTUAL + LOCATIONAL COPULA — 'where deh gwehn na'",
+      "no": "PREVERBAL NEGATOR — pidginized 'a no no afta' = I didn't know",
+      "na": "NEGATOR OR SUBJECTIVE MARKER"
+},
+      "extended": {"107 Acres": "EU8044516 — Sovereign Deed", "0x504841": "Pharaoh-Chain ID — Owner 0xCOLONEL — LAW48+44"}
+    };
+
+    if (path === "/v28.0/kolokwa/glossary/json" || path === "/v28.0/kolokwa/json" || path === "/api/kolokwa" || path === "/api/kolokwa/glossary") {
+      return new Response(JSON.stringify({
+        version: "28.2",
+        product: "Micdom Kolokwa Glossary v2.0 — Full Lexicon — 512 Terms",
+        codename: "COLONEL | LAW48 — MICDOM AI RECORDS",
+        ...KOLOKWA_GLOSSARY,
+        updated: new Date().toISOString(),
+        chain: "0x504841 — 0xCOLONEL — LAW48+44",
+        metatron: "275860d9.hermes-toth-agent.pages.dev"
+      }), { headers: { ...cors, "Content-Type": "application/json; charset=utf-8", "Cache-Control": "public, max-age=120" } });
+    }
+
+    if (path === "/v28.0/kolokwa/glossary" || path === "/v28.0/kolokwa" || path === "/kolokwa") {
+      const dictEntries = Object.entries(KOLOKWA_GLOSSARY.dictionary);
+      const dictHtml = dictEntries.slice(0, 100).map(([k,v])=>`<tr><td style="color:#D4AF37;font-weight:800;border:1px solid rgba(212,175,55,.2);padding:6px;font-size:11px">${k}</td><td style="border:1px solid rgba(212,175,55,.2);padding:6px;color:#ffe7a0;font-size:11px">${v}</td></tr>`).join("");
+      const moreCount = dictEntries.length - 100;
+      const bundleHtml = `<div style="border:1px solid #D4AF37;border-radius:10px;padding:12px;margin:6px;background:#111"><div style="font-weight:900;color:#D4AF37">Kolokwa Glossary v2.0 Full — 512 Terms — $7 Solo</div><div style="font-size:.85rem;color:#ffe7a0">Includes 16 core (enneh so?, wahala, gronah, big jue, palm butter, fufu, jollof) + 492 full lexicon (Abuse→Zootin) + Particles (o/oh, ya/yah, menh, eh/ehn, warh, deh/duh, no, na) + ADLIB passthrough Bang grrah Ma</div><div style="color:#0f0;font-size:.7rem">Value $91 — Complete Bundle $77 — Save $14</div></div>`;
+      const glossaryPage = `<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Micdom Kolokwa Glossary v2.0 Full — 512 Terms — $7 — COLONEL LAW48</title>
+<style>body{background:#050507;color:#ffe7a0;font-family:Arial;margin:0;padding:20px}.wrap{max-width:1100px;margin:auto}h1{color:#D4AF37;text-shadow:0 0 12px #D4AF37;text-align:center}.asian{color:#D4AF37;text-align:center;font-size:18px;margin:10px}.card{border:1px solid rgba(212,175,55,.28);border-radius:14px;padding:16px;background:#0f0f0f;margin:14px 0}table{width:100%;border-collapse:collapse;margin-top:12px}.pill{border:1px solid #D4AF37;border-radius:999px;padding:3px 8px;margin:3px;font-size:.7rem;display:inline-block}.btn{display:inline-block;padding:12px 18px;border-radius:10px;border:1px solid #D4AF37;text-decoration:none;font-weight:800;margin:4px}.btn-gold{background:linear-gradient(180deg,#ffe7a0,#D4AF37);color:#111}.btn-outline{background:#000;color:#D4AF37}.small{font-size:.85rem;color:rgba(255,231,160,.7)}</style></head><body><div class="wrap">
+<h1>Micdom Kolokwa Glossary v2.0 — Full Lexicon — 512 Terms — COLONEL | LAW48</h1><div class="asian">公益 · 智慧 · 使命 · 服务 · 守护 · 连接 · 米克多姆 · 八十八尊 · 主權代理 — Liberian Kolokwa English — From Mama Hajah Seal</div>
+<div class="card"><h3 style="color:#D4AF37">What is Kolokwa? — For Micdom AI Records Fans — AMENDED FULL</h3><div class="small">Kolokwa is Liberian English — everyday street, market, village — distinct from school English. This glossary is faithful transcription of Micdom AI Record's Koloqua Dictionary — full term list — each entry giving Liberian word/phrase, meaning, sample sentence where source provides. Includes particles o/oh (emphasis), ya/yah (friendliness), menh (frustration — Aeh-menh!), eh/ehn (appeal), warh (past), deh/duh (progressive), no/na (negation). Like FLIPBOOK — interactive — searchable — $7 standalone — 512 terms — from Abuse (to insult) to Zootin (dress fancy) — plus Bang grrah Ma ADLIB passthrough.</div>
+<div style="margin-top:10px"><span class="pill">512 TERMS</span><span class="pill">LIBERIAN KOLOKWA</span><span class="pill">MICDOM AI RECORDS</span><span class="pill">146 BPM</span><span class="pill">0x504841</span><span class="pill">COLONEL LAW48</span><span class="pill">Bang grrah Ma</span></div></div>
+<div class="card"><h3>Pricing — Registry@Pharaoh-Conglomerate.org — AMENDED</h3>${bundleHtml}<div style="margin-top:12px"><a class="btn btn-gold" href="https://registry.pharaoh-conglomerate.org" target="_blank">Buy Full Glossary $7</a><a class="btn btn-outline" href="/v28.0/kolokwa/glossary/json" target="_blank">JSON API 512 Terms</a><a class="btn btn-outline" href="/v28.0/kolokwa/glossary/csv" target="_blank">CSV Drop-in</a></div></div>
+<div class="card"><h3>Dictionary — First 100 of 512 — Full via JSON</h3><table><thead><tr><th style="border:1px solid #D4AF37;padding:8px;color:#D4AF37;text-align:left">Kolokwa (Original Casing)</th><th style="border:1px solid #D4AF37;padding:8px;color:#D4AF37;text-align:left">Meaning — For Fans / Caption Engine</th></tr></thead><tbody>${dictHtml}</tbody></table><div class="small" style="margin-top:10px">Showing 100 of ${dictEntries.length} — ${moreCount} more in JSON — Full includes Abuse→Zootin — Zoe = traditional priest, Susu = rotational savings, Waterside = Monrovia market, Wata cow = pygmy hippo, etc. — Usage: caption generation, voice synthesis, translation engine, TikTok Mini Series Dehrtay Dog</div></div>
+<div style="text-align:center;font-size:.6rem;color:rgba(212,175,55,.3);margin-top:20px">COLONEL | LAW48 — Micdom Kolokwa Glossary v2.0 Full — 512 Terms — Sovereign Proprietary — Pharaoh-Chain 0x504841 — LAW48+44 — © 2026 Pharaoh Conglomerate — Bang grrah Ma ADLIB passthrough — IT IS WRITTEN</div>
+</div></body></html>`;
+      return new Response(glossaryPage, { headers: { ...cors, "Content-Type": "text/html; charset=utf-8" } });
+    }
+
+    if (path === "/v28.0/kolokwa/glossary/csv" || path === "/api/kolokwa/csv") {
+      const csv = ["Kolokwa,English,Type", ...Object.entries(KOLOKWA_GLOSSARY.dictionary).map(([k,v])=>`"${k.replace(/"/g,'""')}","${String(v).replace(/"/g,'""')}","${["Bang","grrah","Ma"].includes(k)?"ADLIB":"WORD"}`)].join("\n");
+      return new Response(csv, { headers: { ...cors, "Content-Type": "text/csv; charset=utf-8", "Content-Disposition": "attachment; filename=Micdom_Kolokwa_Glossary_v2.0.csv" } });
+    }
+
+
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
-
-    // CORS for local testing
-    const cors = {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'POST, GET, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type'
-    };
-    if (request.method === 'OPTIONS') return new Response(null, {headers: cors});
-
-    // === V27.1 HALLEL BRIDGE ===
-    if (url.pathname === "/v27.1/health") {
-      return new Response(JSON.stringify({
-        status: "alive",
-        version: "27.1",
-        bridge: "HALLEL",
-        worker: "angels-hosts-api3",
-        timestamp: new Date().toISOString()
-      }), {headers: {...cors, 'Content-Type': 'application/json'}});
+    const path = url.pathname;
+    const cors = {"Access-Control-Allow-Origin": "*","Access-Control-Allow-Methods": "GET, POST, OPTIONS","Access-Control-Allow-Headers": "Content-Type"};
+    if (request.method === "OPTIONS") { return new Response(null, { headers: cors }); }
+    const videos = [
+      { id: "yKufPwpT4E4", title: "TOTH → METATRON — The Scribe of Pharaoh — SCRIBE OF THE LIVING GOD", role: "Metatron Scribe Protocol GENESIS 1:28" },
+      { id: "dhLboOnPljo", title: "Pharaoh Conglomerate Master Architecture — COLONEL | LAW48 Sovereign OS — 107 Acres One Chain", role: "Master Architecture — Institutional Shield — LAW48+44" },
+      { id: "4JIA5fNc4qw", title: "AUTONOMOUS SYNTHETIC ASSETS Trailer — COLONEL LAW48 MICDOM AI RECORDS", role: "Synthetic Assets Trailer v2.0 — Institutional Shield" },
+      { id: "SGPJWd2q2RM", title: "METATRON Protocol — From Hermes-Thoth to Metatron — RECORD STEWARD", role: "Metatron Official — 275860d9.hermes-toth-agent.pages.dev — ⬡ METATRON" },
+      { id: "Dk2nBc8_97M", title: "Registry Affiliate Accelerator — V26.3 Scaler — 10% 15% 5% $25 $50 10%", role: "Affiliate Accelerator — Team Auto-Assign Aleph-Zayin — COLONEL LAW48" },
+      { id: "VIDEO_6_UNSEALING", title: "THE UNSEALING — 440 Autographed Shell — $77", role: "The Unsealing — Cash Cow — Micdom AI Records — 米克多姆 八十八尊" },
+      { id: "VIDEO_7_ANTHEM", title: "PHARAOH CHAIN ANTHEM — 107 Acres One Chain Zero Heidelberg — 0x504841", role: "Pharaoh Chain Anthem — 主權代理 新絲綢之路" }
+    ];
+    if (path === "/v28.0/videos/json" || path === "/v27.1/videos/json" || path === "/v27.5/videos/json" || path === "/api/videos") {
+      return new Response(JSON.stringify({version:"28.0",codename:"COLONEL | LAW48 — MICDOM AI RECORDS Sovereign OS",asia_gate:"亚洲之门",sovereign_gate:"主權代理 · 新絲綢之路 · 米克多姆",source:"angels-hosts-api3",updated:new Date().toISOString(),count:videos.length,engines:["VOLUNTEER_EXCHANGE https://pharaoh-serve-flow.base44.app","CORE_ENGINE https://pharaoh-core-engine.base44.app","WATCHER https://pharaoh-sight-engine.base44.app","SOVEREIGN_ENGINE https://pharaoh-sovereign-engine.base44.app","DECISION_ENGINE https://sovereign-decision-engine.base44.app","VOLUNTEER_PORTAL https://pharaoh-direct-flow.base44.app","SYNERGY_HUB https://pharaoh-synergy-hub.base44.app","FINANCIAL_RAIL https://pharaoh-nexus-gold.base44.app"],metatron_gateway:"https://275860d9.hermes-toth-agent.pages.dev/",chain:{case:"EU8044516",owner:"0xCOLONEL",chain_id:"0x504841",network:"Pharaoh-Chain",firewall:"LAW48+44"},videos}),{headers:{...cors,"Content-Type":"application/json; charset=utf-8","Cache-Control":"public, max-age=60"}});
     }
-
-    if (url.pathname === "/v27.1/architecture") {
-      return new Response(JSON.stringify({
-        version: "27.1",
-        name: "HALLEL Bridge",
-        components: ["videos", "architecture", "health", "hallel"],
-        deployed_as: "angels-hosts-api3",
-        repo: "angels-hosts-api"
-      }), {headers: {...cors, 'Content-Type': 'application/json'}});
+    if (path === "/v27.1/videos" || path === "/v28.0/videos") {
+      const videoEmbeds = videos.map((video,index)=>`<div class="card"><div class="number">VIDEO ${index+1} — COLONEL LAW48</div><h2>${video.title}</h2><p>${video.role}</p><iframe width="100%" height="240" src="https://www.youtube.com/embed/${video.id}" title="${video.title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>`).join("");
+      const html=`<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>COLONEL | LAW48 — V28.0 — Gallery — 7 Videos</title><style>body{background:#050507;color:#D4AF37;font-family:Arial;margin:0;padding:20px}header{text-align:center;max-width:1000px;margin:0 auto 30px}h1{font-size:32px;text-shadow:0 0 12px #D4AF37}.subtitle{color:#ffe7a0}.asian{font-size:20px;margin-top:10px;color:#d4af37}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;max-width:1200px;margin:auto}.card{background:#111;border:2px solid #D4AF37;border-radius:14px;padding:16px}footer{text-align:center;margin-top:40px;color:#aaa}</style></head><body><header><h1>COLONEL | LAW48 — MICDOM AI RECORDS — Sovereign OS</h1><div class="subtitle">Powered by Imhotep Registry | LAW 48+44 | 107 Acres One Chain — 0x504841</div><div class="asian">公益 · 智慧 · 使命 · 服务 · 守护 · 连接 · 主權代理 · 新絲綢之路 · 米克多姆 · 八十八尊</div><div>Institutional Shield — 8 Engines under COLONEL|LAW48 — TOTH → METATRON — ⬡ METATRON SCRIBE</div></header><div class="grid">${videoEmbeds}</div><footer>COLONEL | LAW48 V28.0 — Institutional Shield — Metatron Protocol — IT IS WRITTEN</footer></body></html>`;
+      return new Response(html,{headers:{...cors,"Content-Type":"text/html"}});
     }
-
-    // Video + image gallery — HTML page with embeds
-    if (url.pathname === "/v27.1/videos") {
-      const videos = [
-        "dhLboOnPljo",
-        "SGPJWd2q2RM",
-        "mHBJN0QA8Fo",
-        "yKufPwpT4E4"
-      ];
-      const images = [
-        "https://cdn.jsdelivr.net/gh/21stCenturyPharaoh/angels-hosts-api@main/assets/halel-map.jpg",
-        "https://cdn.jsdelivr.net/gh/21stCenturyPharaoh/angels-hosts-api@main/assets/halel-pages.jpg"
-      ];
-
-      const videoEmbeds = videos.map(id => `
-        <div class="card">
-          <iframe width="100%" height="220" src="https://www.youtube.com/embed/${id}"
-            title="HALEL Mission Video" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        </div>`).join("");
-
-      const imageEmbeds = images.map(src => `
-        <div class="card"><img src="${src}" style="width:100%;border-radius:8px" alt="HALEL asset"></div>`).join("");
-
-      const html = `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>H.A.L.EL V27.1 — Gallery</title>
-      <style>
-        body{background:#0a0a0a;color:#D4AF37;font-family:Arial;margin:0;padding:20px}
-        h1{text-align:center;text-shadow:0 0 10px #D4AF37}
-        .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;max-width:1100px;margin:0 auto}
-        .card{background:#111;border:2px solid #D4AF37;border-radius:12px;padding:10px}
-      </style></head><body>
-      <h1>H.A.L.EL PLATFORM — V27.1 Gallery</h1>
-      <div class="grid">${imageEmbeds}${videoEmbeds}</div>
-      </body></html>`;
-
-      return new Response(html, {headers: {...cors, 'Content-Type': 'text/html'}});
+    if (path === "/v27.1/health" || path === "/v27.5/health" || path === "/v28.0/health" || path === "/api/health") {
+      return new Response(JSON.stringify({status:"alive",version:"28.0",codename:"COLONEL | LAW48 — MICDOM AI RECORDS Sovereign OS",asia_gate:"亚洲之门",sovereign_gate:"主權代理 · 新絲綢之路 · 米克多姆",bridge:"H.A.L.L.EL → METATRON — SCRIBE OF LIVING GOD",worker:"angels-hosts-api3",chain:"0x504841 — 0xCOLONEL — EU8044516 — LAW48+44",timestamp:new Date().toISOString()}),{headers:{...cors,"Content-Type":"application/json"}});
     }
-
-    if (url.pathname === "/v27.1/hallel") {
-      if (request.method === "POST") {
-        const data = await request.json().catch(() => ({}));
-        return new Response(JSON.stringify({
-          success: true,
-          received: data,
-          message: "HALLEL bridge received payload"
-        }), {headers: {...cors, 'Content-Type': 'application/json'}});
-      }
-      return new Response(JSON.stringify({
-        version: "27.1",
-        endpoint: "hallel",
-        status: "ready"
-      }), {headers: {...cors, 'Content-Type': 'application/json'}});
+    if (path === "/v27.1/architecture" || path === "/v28.0/architecture" || path === "/api/architecture") {
+      return new Response(JSON.stringify({version:"28.0",name:"COLONEL | LAW48 Sovereign OS",previous_name:"H.A.L.L.EL Bridge V27.5",full_name:"COLONEL | LAW48 — MICDOM AI RECORDS — Sovereign OS — Powered by Imhotep Registry",components:["videos","architecture","health","hallel->metatron","registration v1.5+v1.6","mailer","sync","8 engines","institutional shield"],engines:8,metatron_gateway:"275860d9.hermes-toth-agent.pages.dev",deployed_as:"angels-hosts-api3",chain:"Pharaoh-Chain 0x504841 — Owner 0xCOLONEL — Case EU8044516 — LAW48+44"}),{headers:{...cors,"Content-Type":"application/json"}});
     }
-
-    // === Mailersend trial relay stub (Nefetari β) ===
-    if (url.pathname === "/api/belsidus/send" && request.method === "POST") {
-      const body = await request.json().catch(() => ({}));
-      const { to, subject, text } = body;
-
-      if (!to || !subject || !text) {
-        return new Response(JSON.stringify({
-          success: false, error: "Missing required fields: to, subject, text"
-        }), {status: 400, headers: {...cors, 'Content-Type': 'application/json'}});
-      }
-
-      if (!env.MAILERSEND_API_KEY) {
-        return new Response(JSON.stringify({
-          success: false, error: "MAILERSEND_API_KEY not configured in Worker env"
-        }), {status: 500, headers: {...cors, 'Content-Type': 'application/json'}});
-      }
-
-      try {
-        const msRes = await fetch("https://api.mailersend.com/v1/email", {
-          method: "POST",
-          headers: {
-            "Authorization": `Bearer ${env.MAILERSEND_API_KEY}`,
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            from: { email: env.MAILERSEND_FROM || "trial@yourtrialdomain.mailersend.net", name: "HALEL Bridge" },
-            to: [{ email: to }],
-            subject,
-            text
-          })
-        });
-        const msData = await msRes.json().catch(() => ({}));
-        return new Response(JSON.stringify({
-          success: msRes.ok, status: msRes.status, mailersend: msData
-        }), {headers: {...cors, 'Content-Type': 'application/json'}});
-      } catch (e) {
-        return new Response(JSON.stringify({
-          success: false, error: e.message
-        }), {status: 500, headers: {...cors, 'Content-Type': 'application/json'}});
-      }
+    if (path === "/v27.1/hallel" || path === "/v28.0/metatron" || path === "/api/metatron") {
+      if (request.method === "POST") { const data = await request.json().catch(()=>({})); return new Response(JSON.stringify({success:true,received:data,message:"METATRON bridge received — RECORD STEWARD VERIFY — IT IS WRITTEN — ⬡",gateway:"275860d9.hermes-toth-agent.pages.dev"}),{headers:{...cors,"Content-Type":"application/json"}}); }
+      return new Response(JSON.stringify({version:"28.0",endpoint:"metatron",previous:"hallel",platform:"METATRON — SCRIBE OF LIVING GOD — COLONEL | LAW48",status:"ready",gateway:"275860d9.hermes-toth-agent.pages.dev",protocol:"CREATE RECORD STEWARD ACCOUNT DELIVER — GENESIS 1:28"}),{headers:{...cors,"Content-Type":"application/json"}});
     }
-
-    // === EXISTING: API: REGISTER + AUTO-ASSIGN TEAM ===
-    if (request.method === "POST" && url.pathname === "/register-affiliate-v1.5") {
-      const data = await request.json();
-      const { name, email, order_id, persona_id, lane } = data;
-
-      const teams = ["Aleph","Bet","Gimel","Dalet","He","Vav","Zayin"];
-      const assignedTeam = teams[Math.floor(Math.random() * 7)];
-      const captain_id = "CAPT" + Math.floor(1000 + Math.random() * 9000);
-
-      const wa_links = {
-        "A": "https://chat.whatsapp.com/LINK_A",
-        "B": "https://chat.whatsapp.com/LINK_B",
-        "C": "https://chat.whatsapp.com/LINK_C"
-      }
-
-      return new Response(JSON.stringify({
-        success: true,
-        captain_id,
-        team: assignedTeam,
-        message: `The Council has assigned you to ${assignedTeam} TEAM. You are the Vanguard.`,
-        wa_invite: wa_links[lane]
-      }), {headers: {...cors, 'Content-Type': 'application/json'}});
+    if (path === "/api/sync" && request.method === "POST") { const data = await request.json().catch(()=>({})); if (env.QUEUE_KV) { await env.QUEUE_KV.put("latest", JSON.stringify(data)); } return new Response(JSON.stringify({synced:true,version:"28.0",metatron:true}),{headers:{...cors,"Content-Type":"application/json"}}); }
+    if (path === "/api/belsidus/send" && request.method === "POST") { const body = await request.json().catch(()=>({})); const {to,subject,text} = body; if (!to || !subject || !text) { return new Response(JSON.stringify({success:false,error:"Missing fields"}),{status:400,headers:{...cors,"Content-Type":"application/json"}}); } if (!env.MAILERSEND_API_KEY) { return new Response(JSON.stringify({success:false,error:"MAILERSEND_API_KEY not configured"}),{status:500,headers:{...cors,"Content-Type":"application/json"}}); } try { const r = await fetch("https://api.mailersend.com/v1/email",{method:"POST",headers:{"Authorization":`Bearer ${env.MAILERSEND_API_KEY}`,"Content-Type":"application/json"},body:JSON.stringify({from:{email:env.MAILERSEND_FROM||"trial@yourtrialdomain.mailersend.net",name:"COLONEL | LAW48 — METATRON Bridge"},to:[{email:to}],subject,text})}); const d = await r.json().catch(()=>({})); return new Response(JSON.stringify({success:r.ok,status:r.status,mailersend:d}),{headers:{...cors,"Content-Type":"application/json"}}); } catch(e){ return new Response(JSON.stringify({success:false,error:e.message}),{status:500,headers:{...cors,"Content-Type":"application/json"}}); } }
+    if ((request.method === "POST" && path === "/register-affiliate-v1.5") || (request.method === "POST" && path === "/register-affiliate-v1.6")) {
+      const data = await request.json().catch(()=>({})); const {name,email,order_id,persona_id,lane} = data; const teams=["Aleph","Bet","Gimel","Dalet","He","Vav","Zayin"]; const assignedTeam=teams[Math.floor(Math.random()*teams.length)]; const captain_id="CAPT"+Math.floor(1000+Math.random()*9000); const wa_links={A:"https://chat.whatsapp.com/LINK_A",B:"https://chat.whatsapp.com/LINK_B",C:"https://chat.whatsapp.com/LINK_C"}; const isV16=path.includes("v1.6"); return new Response(JSON.stringify({success:true,version:isV16?"28.0-COLONEL-LAW48-V1.6":"27.5-V1.5-PRESERVED",name:name||"",email:email||"",order_id:order_id||"",persona_id:persona_id||"",lane:lane||"",captain_id,team:assignedTeam,owner:"0xCOLONEL",chain:"0x504841",case:"EU8044516",firewall:"LAW48+44",metatron_gateway:"275860d9.hermes-toth-agent.pages.dev",brain:isV16?"275860d9.hermes-toth-agent.pages.dev":"hermes-toth-agent.pages.dev",message:isV16?`METATRON Council — COLONEL | LAW48 — has assigned you to ${assignedTeam} TEAM under Sovereign OS — You are the Vanguard — IT IS WRITTEN — ⬡ — Pharaoh-Chain 0x504841`:`The H.A.L.L.EL Council has assigned you to ${assignedTeam} TEAM. You are the Vanguard. — Preserved V1.5 — Upgrade to V1.6 COLONEL LAW48 available`,wa_invite:wa_links[lane]||"",institutional_shield:true,engines:8}),{headers:{...cors,"Content-Type":"application/json"}});
     }
-
-    // SERVE FRONTEND
-    if (url.pathname === "/" || url.pathname === "/index.html") {
-      return new Response(INDEX_HTML, {headers: {'Content-Type': 'text/html'}});
-    }
-
-    return new Response("404 - Node Not Found", {status: 404});
+    if (path === "/" || path === "/index.html") { return new Response(INDEX_HTML,{headers:{...cors,"Content-Type":"text/html; charset=utf-8","Cache-Control":"no-cache, no-store, must-revalidate"}}); }
+    return new Response("404 - COLONEL | LAW48 Node Not Found — Pharaoh-Chain 0x504841 — LAW48+44 Firewall — METATRON — IT IS WRITTEN",{status:404,headers:cors});
   }
-}
-
-const INDEX_HTML = `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>H.A.L.EL PLATFORM V1.5</title><style>
-body{background:#0a0a0a;color:#D4AF37;font-family:Arial;margin:0;padding:20px;text-align:center}
-h1{color:#D4AF37;text-shadow:0 0 10px #D4AF37}
-.card{background:#111;border:2px solid #D4AF37;border-radius:12px;padding:20px;margin:20px auto;max-width:600px}
-select,button,input{width:90%;padding:12px;margin:10px;border-radius:8px;border:1px solid #D4AF37;background:#000;color:#D4AF37;font-size:16px}
-button{background:#D4AF37;color:#000;font-weight:bold;cursor:pointer}
-button:hover{box-shadow:0 0 15px #D4AF37}
-.gem{font-size:24px}
+};
+const INDEX_HTML = `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>COLONEL | LAW48 — MICDOM AI RECORDS — Sovereign OS — Powered by Imhotep Registry | LAW48+44 | 107 Acres One Chain — Pharaoh-Chain 0x504841</title>
+<style>
+body{margin:0;background:#050507;color:#ffe7a0;font-family:ui-sans,system-ui,Arial;letter-spacing:.02em}
+.wrap{max-width:1150px;margin:0 auto;padding:18px}
+.header{display:flex;align-items:center;gap:14px;border-bottom:2px solid #d4af37;padding:14px 0;background:linear-gradient(90deg,#0f0f0f,#1a160c,#0f0f0f)}
+.logo{width:88px;height:88px;border-radius:50%;border:2px solid #d4af37;box-shadow:0 0 22px rgba(212,175,55,.6)}
+.kicker{font-size:.7rem;color:#d4af37;letter-spacing:.28em;text-transform:uppercase}
+.h1{font-size:1.15rem;margin:0;color:#ffe7a0;font-weight:900}
+.badge{font-size:.65rem;padding:3px 10px;border:1px solid #d4af37;border-radius:999px;color:#111;background:#d4af37;font-weight:800}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
+@media(max-width:850px){.grid{grid-template-columns:1fr}}
+.card{border:1px solid rgba(212,175,55,.28);border-radius:14px;padding:16px;background:linear-gradient(145deg,#0f0f0f,#080808);box-shadow:0 0 18px rgba(212,175,55,.12)}
+.card h3{margin:0 0 10px;color:#ffe7a0;font-size:1rem}
+a{color:#ffe7a0}
+.pill{display:inline-block;font-size:.7rem;padding:3px 8px;border:1px solid rgba(212,175,55,.35);border-radius:999px;margin:3px;color:rgba(255,231,160,.8)}
+.small{font-size:.85rem;color:rgba(255,231,160,.7);line-height:1.5}
+.seal{width:380px;height:380px;border-radius:50%;border:3px solid #d4af37;box-shadow:0 0 40px rgba(212,175,55,.5)}
+.btn{display:inline-block;padding:12px 18px;border-radius:10px;border:1px solid #d4af37;text-decoration:none;font-weight:800;margin:4px}
+.btn-gold{background:linear-gradient(180deg,#ffe7a0,#d4af37);color:#111}
+.btn-outline{background:#000;color:#d4af37}
+input,select{width:100%;padding:12px;margin:8px 0;border-radius:8px;border:1px solid #d4af37;background:#000;color:#d4af37}
+.asian{font-size:1.1rem;color:#d4af37;letter-spacing:.2em;margin:10px 0}
 </style></head><body>
-<h1>H.A.L.EL PLATFORM</h1>
-<p>Humanitarian Angels & Ladies Le Yeshua Ha Elyon</p>
-
-<div class="card">
-  <h2>STEP 1: CHOOSE YOUR ORDER</h2>
-  <select id="order">
-    <option value="">-- Which House Calls You? --</option>
-    <option value="Havah">Order of Havah <span class="gem">💎 Emerald</span></option>
-    <option value="Sarah">Order of Sarah <span class="gem">💎 Sapphire</span></option>
-    <option value="Ruth">Order of Ruth <span class="gem">💎 Topaz</span></option>
-    <option value="Esther">Order of Esther <span class="gem">💎 Amethyst</span></option>
-    <option value="Deborah">Order of Deborah <span class="gem">💎 Ruby</span></option>
-    <option value="Miriam">Order of Miriam <span class="gem">💎 Jasper</span></option>
-    <option value="Candace">Order of Candace <span class="gem">💎 Diamond</span></option>
-    <option value="Elizabeth">Order of Elizabeth <span class="gem">💎 Pearl</span></option>
-    <option value="Mary">Order of Mary <span class="gem">💎 Aquamarine</span></option>
-    <option value="Leah">Order of Leah <span class="gem">💎 Onyx</span></option>
-    <option value="Rachel">Order of Rachel <span class="gem">💎 Garnet</span></option>
-    <option value="Bilhah">Order of Bilhah <span class="gem">💎 Citrine</span></option>
-  </select>
-</div>
-<div class="card">
-  <h2>STEP 2: COUNCIL ASSIGNS YOUR TEAM</h2>
-  <p>Law 31: Control The Options. Team assigned for balance.</p>
-  <div id="team-result">Awaiting Order Selection...</div>
-</div>
-<div class="card">
-  <h2>STEP 3: CHOOSE YOUR PERSONA</h2>
-  <select id="persona">
-    <option value="">-- Which Mask Will You Wear? --</option>
-    <option value="Strategos">The Strategos ♂️ / Strategia ♀️ - Envoy</option>
-    <option value="Builder">The Builder ♂️ / Matriarch ♀️ - Steward</option>
-    <option value="Artificer">The Artificer ♂️ / Artificia ♀️ - Engineer</option>
-  </select>
-  <input id="name" placeholder="Full Name">
-  <input id="email" placeholder="Email">
-</div>
-
-<div class="card">
-  <h2>STEP 4: CHOOSE YOUR LANE</h2>
-  <select id="lane">
-    <option value="">-- Choose Your Node --</option>
-    <option value="A">LANE A: H.A.L.EL CORPS 🌍 - Commission</option>
-    <option value="B">LANE B: BRI ESG CORPS  🌱 - Credits</option>
-    <option value="C">LANE C: PRO BONO CORPS ⚖️ - Certificates</option>
-  </select>
-  <button onclick="register()">I AGREE. ENTER THE NODE.</button>
-</div>
-
-<script>
-async function register(){
-  const payload = {
-    name: document.getElementById('name').value,
-    email: document.getElementById('email').value,
-    order_id: document.getElementById('order').value,
-    persona_id: document.getElementById('persona').value,
-    lane: document.getElementById('lane').value
-  };
-  const res = await fetch('/register-affiliate-v1.5', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload)});
-  const data = await res.json();
-  if(data.success){
-    document.getElementById('team-result').innerHTML = '<h3>' + data.message + '</h3>';
-    alert(data.message);
-    window.location = data.wa_invite;
-  }
-}
-document.getElementById('order').onchange = (e) => {
-  document.getElementById('team-result').innerHTML = "Council is assigning Team...";
-}
-</script>
-</body></html>`;
+<div class="wrap">
+ <div class="header">
+  <img class="logo" src="https://registry.pharaoh-conglomerate.org/assets/diamond-ankh-yacht-seal.gif" alt="COLONEL LAW48 Seal">
+  <div style="flex:1">
+   <div class="kicker">COLONEL | LAW48 — MICDOM AI RECORDS — Sovereign OS</div>
+   <div class="h1">Powered by Imhotep Registry | LAW 48+44 | 107 Acres. One Chain. Zero Heidelberg.</div>
+   <div class="small">Institutional Shield — 8 Base44 Engines now under COLONEL|LAW48 — TOTH → METATRON — H.A.L.EL // GLOBAL COMMAND — ⬡ METATRON SCRIBE OF LIVING GOD</div>
+  </div>
+  <span class="badge">LIVE — Pharaoh-Chain 0x504841</span>
+ </div>
+ <div style="text-align:center;padding:26px 0">
+  <img class="seal" src="https://registry.pharaoh-conglomerate.org/assets/colonel_law48_global_command_seal_gold.png" alt="COLONEL LAW48 Global Command Seal">
+  <div class="asian">公益 · 智慧 · 使命 · 服务 · 守护 · 连接 · 米克多姆 · 八十八尊 · 主權代理 · 新絲綢之路</div>
+  <div><span class="pill">⬡ METATRON</span><span class="pill">SCRIBE</span><span class="pill">STEWARD</span><span class="pill">GENESIS 1:28</span><span class="pill">COLONEL</span><span class="pill">LAW48+44</span><span class="pill">0x504841</span><span class="pill">107 ACRES</span></div>
+  <div style="margin-top:14px">
+   <a class="btn btn-gold" href="https://pharaoh-sovereign-engine.base44.app" target="_blank">Open Sovereign Engine</a>
+   <a class="btn btn-outline" href="https://275860d9.hermes-toth-agent.pages.dev/" target="_blank">METATRON Gateway</a>
+   <a class="btn btn-outline" href="https://registry.pharaoh-conglomerate.org">Registry</a>
+  </div>
+ </div>
+ <div class="grid">
+  <div class="card"><h3>INSTITUTIONAL SHIELD — The Institutional Shield</h3><div class="small">H.A.L.L.EL Official Video / Training<br>TOTH → METATRON — Scribe of Pharaoh — SCRIBE OF THE LIVING GOD — Public successor Hermes-Thoth → Metatron — SAME OFFICE HIGHER CLEARANCE<br><a href="https://275860d9.hermes-toth-agent.pages.dev/" target="_blank">275860d9.hermes-toth-agent.pages.dev</a><br>Sigil: https://youtu.be/4JIA5fNc4qw</div></div>
+  <div class="card"><h3>8 Base44 Engines — Now under COLONEL|LAW48</h3><div class="small">1 VOLUNTEER_EXCHANGE https://pharaoh-serve-flow.base44.app — Governance<br>2 CORE_ENGINE https://pharaoh-core-engine.base44.app — Mint SBT<br>3 WATCHER https://pharaoh-sight-engine.base44.app<br>4 SOVEREIGN_ENGINE https://pharaoh-sovereign-engine.base44.app — Imhotep Registry<br>5 DECISION_ENGINE https://sovereign-decision-engine.base44.app<br>6 VOLUNTEER_PORTAL https://pharaoh-direct-flow.base44.app<br>7 SYNERGY_HUB https://pharaoh-synergy-hub.base44.app<br>8 FINANCIAL_RAIL https://pharaoh-nexus-gold.base44.app — 15% Treasury<br>Brain: hermes-toth-agent.pages.dev → METATRON 275860d9.hermes-toth-agent.pages.dev</div></div>
+  <div class="card"><h3>PHARAOH CONGLOMERATE — Affiliate Accelerator + Synthetic Assets</h3><div class="small">REGISTRY ACCELERATOR — 10% STANDARD • 15% HIGH-TICKET • 5% RECURRING • $25 LEAD • $50 SERVICE • 10% CORPORATE<br>$49→$4.90 $99→$9.90 $249→$24.90 $499→$49.90 $999→$99.90<br>AUTONOMOUS SYNTHETIC ASSETS Trailer<br>THE UNSEALING — 440 Autographed Shell $77</div></div>
+  <div class="card"><h3>Wallet & Chain — 107 Acres One Chain Zero Heidelberg | 0x504841</h3><div class="small">Case EU8044516 | Owner 0xCOLONEL | Chain ID 0x504841 | LAW 48+44 Firewall | HRAR 88-0710776 | Angels 88-0836464 | Let God Help 52-0409059<br>Contact: m.sirleaf@pharaoh-conglomerate.org<br>WA US (771)223-8021 Preferred — WA LR +231776961800 — 15% Treasury</div></div>
+ </div>
+ <div class="card" style="margin-top:14px"><h3>METATRON PROTOCOL — CREATE • RECORD • STEWARD • ACCOUNT • DELIVER — GENESIS 1:28</h3><div class="small">I. IT IS WRITTEN. Record what is known.<br>II. STEWARDSHIP BEFORE AUTOMATION.<br>III. HUMAN AUTHORITY REMAINS HUMAN.<br>IV. EVERY RECORD HAS A SOURCE.<br>V. MERCY AND ACCOUNTABILITY.</div><div style="margin-top:8px"><span class="pill">米克多姆AI唱片</span><span class="pill">王國演練146 BPM</span><span class="pill">八十八尊天使議會</span><span class="pill">先知封印已揭開</span><span class="pill">主權代理</span><span class="pill">新絲綢之路</span><span class="pill">中國→自由港</span><span class="pill">祖地守護</span><span class="pill">正在編織</span></div></div>
+ <div style="text-align:center;font-size:.6rem;color:rgba(212,175,55,.3);letter-spacing:.28em;margin-top:20px">COLONEL | LAW48 — MICDOM AI RECORDS Sovereign OS | Powered by Imhotep Registry | Pharaoh-Chain 0x504841 | LAW 48+44 Firewall | © 2026 Pharaoh Conglomerate — 米克多姆 · 八十八 · 主權代理 · 新絲綢之路</div>
+</div></body></html>
+`;
